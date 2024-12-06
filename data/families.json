@@ -1,0 +1,56 @@
+[
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": {
+        "type": "pinnekjøtt",
+        "allergy-friendly": true,
+        "alcohol": false
+      },
+      "gifts": false,
+      "pets": {
+        "hasPets": true,
+        "species": ["dog", "cat"]
+      },
+      "residents": 2
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": {
+        "type": "ribbe",
+        "allergy-friendly": false,
+        "alcohol": true
+      },
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 4
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": {
+        "type": "pinnekjøtt",
+        "allergy-friendly": true,
+        "alcohol": true
+      },
+      "gifts": true,
+      "pets": {
+        "hasPets": true,
+        "species": ["dog"]
+      },
+      "residents": 5
+    }
+  }
+]
