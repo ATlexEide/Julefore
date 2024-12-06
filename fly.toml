@@ -1,18 +1,21 @@
-# fly.toml app configuration file generated for juleforening on 2024-12-06T21:38:26Z
+# fly.toml app configuration file generated for juleforening-crimson-leaf-9377 on 2024-12-06T23:35:27+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'juleforening'
-primary_region = 'ams'
-
-[processes]
-  app = "deno run --allow-read --allow-env --allow-net main.ts  "
+app = 'juleforening-crimson-leaf-9377'
+primary_region = 'arn'
 
 [build]
 
+[env]
+  PORT = '8080'
+
+[processes]
+  app = 'run --allow-net ./example.ts'
+
 [http_service]
-  internal_port = 3000
+  internal_port = 8080
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
@@ -23,6 +26,3 @@ primary_region = 'ams'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
-
-
