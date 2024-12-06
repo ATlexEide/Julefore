@@ -2,7 +2,7 @@ import express from "express";
 import * as fs from "node:fs";
 
 const app = express();
-const port: number = 3000;
+const port: number = 8080;
 
 let families: JSON;
 fs.readFile("data/families.json", function (err, data) {
