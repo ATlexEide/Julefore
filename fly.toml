@@ -6,6 +6,9 @@
 app = 'juleforening'
 primary_region = 'ams'
 
+[processes]
+  app = "deno run --allow-read --allow-env --allow-net main.ts  "
+
 [build]
 
 [http_service]
@@ -21,3 +24,5 @@ primary_region = 'ams'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
+
+
