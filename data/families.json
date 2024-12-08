@@ -41,8 +41,8 @@
       "alcohol": true,
       "gifts": false,
       "pets": {
-        "hasPets": false,
-        "species": []
+        "hasPets": true,
+        "species": ["dog"]
       },
       "residents": 4
     }
@@ -73,8 +73,8 @@
       "alcohol": true,
       "gifts": false,
       "pets": {
-        "hasPets": false,
-        "species": []
+        "hasPets": true,
+        "species": ["rabbit"]
       },
       "residents": 2
     }

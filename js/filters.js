@@ -29,3 +29,11 @@ export function filterByGifts(value, families = families) {
   });
   return filteredList;
 }
+export function filterByPets(value, families = families) {
+  const filteredList = [];
+  families.forEach((family) => {
+    if (family.preferences.pets.hasPets.toString() === value)
+      filteredList.push(family);
+  });
+  return filteredList;
+}

@@ -3,6 +3,7 @@ import {
   filterByAllergyFriendly,
   filterByAlcohol,
   filterByGifts,
+  filterByPets,
 } from "./filters.js";
 export function filterFamilies(parameters, families) {
   console.log("parameters: \n", parameters);
@@ -30,6 +31,10 @@ export function filterFamilies(parameters, families) {
       case "gifts":
         console.log("Filtering by allergy friendly");
         filtered = filterByGifts(value, filtered);
+        break;
+      case "pets":
+        console.log("Filtering by allergy friendly");
+        filtered = filterByPets(value, filtered);
         break;
 
       default:
