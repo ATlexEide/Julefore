@@ -1,9 +1,9 @@
 import { filterByFood, filterByAllergyFriendly } from "./filters.js";
+export let filtered = [];
 export function getFamilyHandler(req, families) {
   const parameters = req.query;
   console.log("filtering");
   console.log("parameters: \n", parameters);
-  let filtered = [];
   if (Object.keys(parameters).length === 0)
     throw new Error("no parameters provided");
   for (const [param, value] of Object.entries(parameters)) {
@@ -11,6 +11,10 @@ export function getFamilyHandler(req, families) {
       case "food":
         console.log("Filtering by food");
         filterByFood(value, families);
+
+        // semiFiltered.forEach((family) => {
+        //   filtered.push(family);
+        // });
         break;
       case "allergy-friendly":
         console.log("Filtering by allergy friendly");
@@ -21,6 +25,7 @@ export function getFamilyHandler(req, families) {
         break;
     }
   }
+  console.log(filtered);
 }
 
 function filterFamilies(param, value, families) {
