@@ -1,12 +1,12 @@
 import express from "express";
-import * as fs from "node:fs";
-import { filterFamilies } from "./js/handleFiltering.js";
+import * as fs from "fs";
+import { filterFamilies } from "./modules/handleFiltering.js";
 
 const app = express();
 const port = 8080;
 
 let families;
-fs.readFile("data/families.json", function (err, data) {
+fs.readFile("api/data/families.json", function (err, data) {
   if (err) throw err;
   families = JSON.parse(data.toString());
 });
