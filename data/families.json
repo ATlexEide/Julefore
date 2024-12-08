@@ -4,15 +4,29 @@
     "title": "<Title>",
     "description": "<Lorem ipsum>",
     "preferences": {
-      "food": {
-        "type": "pinnekjøtt",
-        "allergy-friendly": true,
-        "alcohol": false
-      },
+      "food": "ribbe",
+      "allergy-friendly": false,
+      "alcohol": true,
       "gifts": false,
       "pets": {
-        "hasPets": true,
-        "species": ["dog", "cat"]
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 1
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "pinnekjøtt",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
       },
       "residents": 2
     }
@@ -22,11 +36,9 @@
     "title": "<Title>",
     "description": "<Lorem ipsum>",
     "preferences": {
-      "food": {
-        "type": "ribbe",
-        "allergy-friendly": false,
-        "alcohol": true
-      },
+      "food": "ribbe",
+      "allergy-friendly": false,
+      "alcohol": true,
       "gifts": false,
       "pets": {
         "hasPets": false,
@@ -40,17 +52,47 @@
     "title": "<Title>",
     "description": "<Lorem ipsum>",
     "preferences": {
-      "food": {
-        "type": "pinnekjøtt",
-        "allergy-friendly": true,
-        "alcohol": true
-      },
-      "gifts": true,
+      "food": "ribbe",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
       "pets": {
-        "hasPets": true,
-        "species": ["dog"]
+        "hasPets": false,
+        "species": []
       },
-      "residents": 5
+      "residents": 1
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "pinnekjøtt",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 2
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "ribbe",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 4
     }
   }
 ]
