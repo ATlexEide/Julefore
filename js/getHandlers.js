@@ -1,3 +1,4 @@
+import { filterByFood, filterByAllergyFriendly } from "./filters.js";
 export function getFamilyHandler(req, families) {
   const parameters = req.query;
   console.log("filtering");
@@ -7,8 +8,13 @@ export function getFamilyHandler(req, families) {
     throw new Error("no parameters provided");
   for (const [param, value] of Object.entries(parameters)) {
     switch (param) {
-      case food:
+      case "food":
+        console.log("Filtering by food");
         filterByFood(value, families);
+        break;
+      case "allergy-friendly":
+        console.log("Filtering by allergy friendly");
+        filterByAllergyFriendly(value, families);
         break;
 
       default:
