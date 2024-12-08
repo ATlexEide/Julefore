@@ -1,6 +1,6 @@
 import express from "express";
 import * as fs from "node:fs";
-import { filterFamilies } from "./js/getHandlers.js";
+import { filterFamilies } from "./js/handleFiltering.js";
 
 const app = express();
 const port = 8080;

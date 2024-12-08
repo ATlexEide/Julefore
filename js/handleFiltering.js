@@ -2,6 +2,7 @@ import {
   filterByFood,
   filterByAllergyFriendly,
   filterByAlcohol,
+  filterByGifts,
 } from "./filters.js";
 export function filterFamilies(parameters, families) {
   console.log("parameters: \n", parameters);
@@ -25,6 +26,10 @@ export function filterFamilies(parameters, families) {
       case "allergy-friendly":
         console.log("Filtering by allergy friendly");
         filtered = filterByAllergyFriendly(value, filtered);
+        break;
+      case "gifts":
+        console.log("Filtering by allergy friendly");
+        filtered = filterByGifts(value, filtered);
         break;
 
       default:

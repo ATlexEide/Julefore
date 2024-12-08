@@ -1,7 +1,7 @@
 [
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 1",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
@@ -17,13 +17,13 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 2",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "pinnekjøtt",
       "allergy_friendly": false,
       "alcohol": "yes",
-      "gifts": false,
+      "gifts": true,
       "pets": {
         "hasPets": false,
         "species": []
@@ -33,7 +33,7 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 3",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
@@ -49,13 +49,13 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 4",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
       "allergy_friendly": false,
       "alcohol": true,
-      "gifts": false,
+      "gifts": true,
       "pets": {
         "hasPets": false,
         "species": []
@@ -65,7 +65,7 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 5",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "pinnekjøtt",
@@ -81,7 +81,7 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 6",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
