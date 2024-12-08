@@ -2,9 +2,9 @@ import express from "express";
 import * as fs from "node:fs";
 
 const app = express();
-const port: number = 8080;
+const port = 8080;
 
-let families: JSON;
+let families;
 fs.readFile("data/families.json", function (err, data) {
   if (err) throw err;
   families = JSON.parse(data.toString());
