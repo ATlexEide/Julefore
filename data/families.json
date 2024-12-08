@@ -46,5 +46,53 @@
       },
       "residents": 4
     }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "ribbe",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 1
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "pinnekjøtt",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 2
+    }
+  },
+  {
+    "image": "<image url>",
+    "title": "<Title>",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "ribbe",
+      "allergy-friendly": false,
+      "alcohol": true,
+      "gifts": false,
+      "pets": {
+        "hasPets": false,
+        "species": []
+      },
+      "residents": 4
+    }
   }
 ]
