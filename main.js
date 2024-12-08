@@ -13,12 +13,13 @@ fs.readFile("data/families.json", function (err, data) {
 
 app.use(express.json());
 app.get("/", (req, res) => {
+  console.log(req);
   res.send("Server root");
 });
 app.get("/families", (req, res) => {
   res.send(families);
 });
-app.get("/families/search", (req, res) => {
+app.get("/families/filter/preferences", (req, res) => {
   const filteredFamilies = getFamilyHandler(req, families);
   res.send(filteredFamilies);
 });
