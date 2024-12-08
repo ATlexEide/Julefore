@@ -1,11 +1,11 @@
 [
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 1",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
@@ -17,13 +17,13 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 2",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "pinnekjøtt",
-      "allergy-friendly": false,
-      "alcohol": true,
-      "gifts": false,
+      "allergy_friendly": false,
+      "alcohol": "yes",
+      "gifts": true,
       "pets": {
         "hasPets": false,
         "species": []
@@ -33,29 +33,29 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 3",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
-        "hasPets": false,
-        "species": []
+        "hasPets": true,
+        "species": ["dog"]
       },
       "residents": 4
     }
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 4",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
-      "gifts": false,
+      "gifts": true,
       "pets": {
         "hasPets": false,
         "species": []
@@ -65,28 +65,28 @@
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 5",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "pinnekjøtt",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
-        "hasPets": false,
-        "species": []
+        "hasPets": true,
+        "species": ["rabbit"]
       },
       "residents": 2
     }
   },
   {
     "image": "<image url>",
-    "title": "<Title>",
+    "title": "Familie 6",
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
-      "alcohol": true,
+      "allergy_friendly": false,
+      "alcohol": false,
       "gifts": false,
       "pets": {
         "hasPets": false,

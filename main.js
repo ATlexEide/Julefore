@@ -1,6 +1,6 @@
 import express from "express";
 import * as fs from "node:fs";
-import { getFamilyHandler } from "./js/getHandlers.js";
+import { filterFamilies } from "./js/handleFiltering.js";
 
 const app = express();
 const port = 8080;
@@ -20,8 +20,7 @@ app.get("/families", (req, res) => {
   res.send(families);
 });
 app.get("/families/filter/preferences", (req, res) => {
-  const filteredFamilies = getFamilyHandler(req, families);
-  res.send(filteredFamilies);
+  res.send(filterFamilies(req.query, families));
 });
 
 app.listen(port, () => {
