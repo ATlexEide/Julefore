@@ -5,7 +5,7 @@
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
@@ -21,8 +21,8 @@
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "pinnekjøtt",
-      "allergy-friendly": false,
-      "alcohol": true,
+      "allergy_friendly": false,
+      "alcohol": "yes",
       "gifts": false,
       "pets": {
         "hasPets": false,
@@ -37,7 +37,7 @@
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
@@ -53,7 +53,7 @@
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
@@ -69,7 +69,7 @@
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "pinnekjøtt",
-      "allergy-friendly": false,
+      "allergy_friendly": false,
       "alcohol": true,
       "gifts": false,
       "pets": {
@@ -85,8 +85,8 @@
     "description": "<Lorem ipsum>",
     "preferences": {
       "food": "ribbe",
-      "allergy-friendly": false,
-      "alcohol": true,
+      "allergy_friendly": false,
+      "alcohol": false,
       "gifts": false,
       "pets": {
         "hasPets": false,
