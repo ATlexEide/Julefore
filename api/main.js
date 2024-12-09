@@ -28,13 +28,16 @@ app.get("/", (req, res) => {
   console.log(req);
   res.send("Server root");
 });
+// Get a list of all families
 app.get("/families", (req, res) => {
   res.send(families);
 });
+// Filter familes based on set preferences
 app.get("/families/filter/preferences", (req, res) => {
   res.send(filterFamilies(req.query, families));
 });
-// Update families
+//// Update a family
+// Expects key value pair for propert(y(ies)) to update
 app.put("/families/:familyId/edit", (req, res) => {
   console.log(req.params);
   updateFamily(req, families);
@@ -42,12 +45,15 @@ app.put("/families/:familyId/edit", (req, res) => {
   updateData();
   console.log(families);
 });
+// Delete a family
 app.delete("/families/:familyId/delete", (req, res) => {
   deleteFamily(req, families);
   updateData();
   console.log(families);
   res.send(`Deleted family ${req.params.familyId}`);
 });
+//// Add a family
+// Expects a body with all family properties
 app.post("/families/create", (req, res) => {
   createFamily(req, families);
   updateData();
