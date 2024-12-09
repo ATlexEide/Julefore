@@ -7,10 +7,12 @@ const app = express();
 const port = 8080;
 
 let families;
-fs.readFile("api/data/families.json", function (err, data) {
-  if (err) throw err;
-  families = JSON.parse(data.toString());
-});
+function fetchData() {
+  fs.readFile("api/data/families.json", function (err, data) {
+    if (err) throw err;
+    families = JSON.parse(data.toString());
+  });
+}
 
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -28,7 +30,11 @@ app.put("/families/:familyId/edit", (req, res) => {
   console.log(req.params);
   updateFamily(req, families);
   res.send("Server root");
-  // TODO: overwrite json with new families list
+  fs.writeFile("api/data/families.json", JSON.stringify(families), () => {
+    fetchData();
+    console.log("Data updated");
+    console.log(families);
+  });
   console.log(families);
 });
 app.delete("/families/:familyId/delete", (req, res) => {
@@ -36,5 +42,6 @@ app.delete("/families/:familyId/delete", (req, res) => {
 });
 
 app.listen(port, () => {
+  fetchData();
   console.log(`Server is running on port ${port}`);
 });
