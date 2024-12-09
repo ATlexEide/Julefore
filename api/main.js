@@ -3,6 +3,7 @@ import * as fs from "fs";
 import { filterFamilies } from "./modules/handleFilterRequest.js";
 import { updateFamily } from "./modules/handlePutRequest.js";
 import { deleteFamily } from "./modules/handleDeleteRequest.js";
+import { createFamily } from "./modules/handlePostRequest.js";
 
 const app = express();
 const port = 8080;
@@ -46,6 +47,12 @@ app.delete("/families/:familyId/delete", (req, res) => {
   updateData();
   console.log(families);
   res.send(`Deleted family ${req.params.familyId}`);
+});
+app.post("/families/create", (req, res) => {
+  createFamily(req, families);
+  updateData();
+  console.log(families);
+  res.send(`Created family`);
 });
 
 app.listen(port, () => {
