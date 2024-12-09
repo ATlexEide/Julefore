@@ -37,3 +37,4 @@ export function filterByPets(value, families = families) {
   });
   return filteredList;
 }
+// TODO: Add filter by residents
