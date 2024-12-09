@@ -1,6 +1,7 @@
 import express from "express";
 import * as fs from "fs";
-import { filterFamilies } from "./modules/handleFiltering.js";
+import { filterFamilies } from "./modules/handleFilterRequest.js";
+import { updateFamily } from "./modules/handlePutRequest.js";
 
 const app = express();
 const port = 8080;
@@ -25,6 +26,7 @@ app.get("/families/filter/preferences", (req, res) => {
 // Update families
 app.put("/families/:familyId/edit", (req, res) => {
   console.log(req.params);
+  updateFamily(req, families);
   res.send("Server root");
 });
 
