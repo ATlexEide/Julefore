@@ -31,6 +31,9 @@ app.put("/families/:familyId/edit", (req, res) => {
   // TODO: overwrite json with new families list
   console.log(families);
 });
+app.delete("/families/:familyId/delete", (req, res) => {
+  console.log(families);
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
