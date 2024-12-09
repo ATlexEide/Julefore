@@ -1,18 +1,42 @@
 export function updateFamily(req, families) {
-  if (!families) throw new Error("NO families provided");
+  if (!families) throw new Error("No families provided");
   let family = families.find((family) => {
     return family.id === Number(req.params.familyId);
   });
-  if (!family) throw new Error("Family not found");
-  // console.log(family);
   for (const [key, value] of Object.entries(req.body)) {
-    if (value.constructor === Object) {
-      for (const [key, secondaryValue] of Object.entries(value)) {
-        console.log(key, secondaryValue);
-      }
+    switch (key) {
+      case "title":
+        family.title = value;
+        break;
+      case "description":
+        family.description = value;
+        break;
+      case "image":
+        family.image = value;
+        break;
+      case "food":
+        family.preferences.food = value;
+        break;
+      case "allergy_friendly":
+        family.preferences.allergy_friendly = value;
+        break;
+      case "alcohol":
+        family.preferences.alcohol = value;
+        break;
+      case "gifts":
+        family.preferences.gifts = value;
+        break;
+      case "pets":
+        family.preferences.pets.hasPets = value;
+        break;
+      case "residents":
+        family.preferences.residents = value;
+        break;
+
+      default:
+        break;
     }
-    // console.log(family);
-    family.key = value;
   }
-  // console.log(family);
+  console.log(family);
+  console.log(req.body);
 }
