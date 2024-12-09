@@ -28,6 +28,8 @@ app.put("/families/:familyId/edit", (req, res) => {
   console.log(req.params);
   updateFamily(req, families);
   res.send("Server root");
+  // TODO: overwrite json with new families list
+  console.log(families);
 });
 
 app.listen(port, () => {
