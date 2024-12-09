@@ -34,7 +34,7 @@ export function updateFamily(req, families) {
         break;
 
       default:
-        break;
+        throw new Error(`Unknown propterty: ${key}`);
     }
   }
   console.log(family);
