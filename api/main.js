@@ -22,6 +22,11 @@ app.get("/families", (req, res) => {
 app.get("/families/filter/preferences", (req, res) => {
   res.send(filterFamilies(req.query, families));
 });
+// Update families
+app.put("/families/:familyId/edit", (req, res) => {
+  console.log(req.params);
+  res.send("Server root");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
