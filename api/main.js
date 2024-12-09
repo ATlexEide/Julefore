@@ -2,6 +2,7 @@ import express from "express";
 import * as fs from "fs";
 import { filterFamilies } from "./modules/handleFilterRequest.js";
 import { updateFamily } from "./modules/handlePutRequest.js";
+import { deleteFamily } from "./modules/handleDeleteRequest.js";
 
 const app = express();
 const port = 8080;
@@ -11,6 +12,13 @@ function fetchData() {
   fs.readFile("api/data/families.json", function (err, data) {
     if (err) throw err;
     families = JSON.parse(data.toString());
+  });
+}
+function updateData() {
+  fs.writeFile("api/data/families.json", JSON.stringify(families), () => {
+    fetchData();
+    console.log("Data updated");
+    console.log(families);
   });
 }
 
@@ -29,16 +37,15 @@ app.get("/families/filter/preferences", (req, res) => {
 app.put("/families/:familyId/edit", (req, res) => {
   console.log(req.params);
   updateFamily(req, families);
-  res.send("Server root");
-  fs.writeFile("api/data/families.json", JSON.stringify(families), () => {
-    fetchData();
-    console.log("Data updated");
-    console.log(families);
-  });
+  res.send(`Edited family ${req.params.familyId}`);
+  updateData();
   console.log(families);
 });
 app.delete("/families/:familyId/delete", (req, res) => {
+  deleteFamily(req, families);
+  updateData();
   console.log(families);
+  res.send(`Deleted family ${req.params.familyId}`);
 });
 
 app.listen(port, () => {
