@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "image": "<image url>",
     "title": "Familie 1",
     "description": "<Lorem ipsum>",
@@ -16,6 +17,7 @@
     }
   },
   {
+    "id": 1,
     "image": "<image url>",
     "title": "Familie 2",
     "description": "<Lorem ipsum>",
@@ -32,6 +34,7 @@
     }
   },
   {
+    "id": 2,
     "image": "<image url>",
     "title": "Familie 3",
     "description": "<Lorem ipsum>",
@@ -48,6 +51,7 @@
     }
   },
   {
+    "id": 3,
     "image": "<image url>",
     "title": "Familie 4",
     "description": "<Lorem ipsum>",
@@ -64,6 +68,7 @@
     }
   },
   {
+    "id": 4,
     "image": "<image url>",
     "title": "Familie 5",
     "description": "<Lorem ipsum>",
@@ -80,6 +85,7 @@
     }
   },
   {
+    "id": 5,
     "image": "<image url>",
     "title": "Familie 6",
     "description": "<Lorem ipsum>",
