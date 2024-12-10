@@ -4,10 +4,10 @@ import { filterFamilies } from "./modules/handleFilterRequest.js";
 import { updateFamily } from "./modules/handlePutRequest.js";
 import { deleteFamily } from "./modules/handleDeleteRequest.js";
 import { createFamily } from "./modules/handlePostRequest.js";
+import cors from "cors";
 
 const app = express();
 const port = 8080;
-
 let families;
 function fetchData() {
   fs.readFile("api/data/families.json", function (err, data) {
@@ -22,7 +22,7 @@ function updateData() {
     console.log(families);
   });
 }
-
+app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
   console.log(req);
@@ -55,6 +55,7 @@ app.delete("/families/:familyId/delete", (req, res) => {
 //// Add a family
 // Expects a body with all family properties
 app.post("/families/create", (req, res) => {
+  console.log(req);
   createFamily(req, families);
   updateData();
   console.log(families);
