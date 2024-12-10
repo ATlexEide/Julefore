@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="opprettFamilie.css" />
+    <script src="./form.js" defer></script>
   </head>
   <body>
     <dialog open>
       <h1>Opprett Familie</h1>
-      <form action="#">
+      <form action="#" id="create-family-form">
         <fieldset>
           <input
             id="create-family-name"
@@ -38,24 +39,27 @@
         </fieldset>
         <fieldset>
           <!-- TODO: Make food options radio buttons instead of checkboxes -->
-          <div class="input-label-container">
-            <input type="radio" name="option-food" id="option-pinnekjøtt" />
-            <label for="option-pinnekjøtt">Pinnekjøtt</label>
+          <div id="radio-menu">
+            <div class="input-label-container">
+              <input type="radio" name="option-food" id="option-pinnekjøtt" />
+              <label for="option-pinnekjøtt">Pinnekjøtt</label>
+            </div>
+            <div class="input-label-container">
+              <input type="radio" name="option-food" id="option-ribbe" />
+              <label for="option-ribbe">Ribbe</label>
+            </div>
+            <div class="input-label-container">
+              <input type="radio" name="option-food" id="option-other" />
+              <label for="option-other">Annet</label>
+            </div>
+            <input
+              type="text"
+              name="input-option-other"
+              id="input-option-other"
+              placeholder="Spesifiser"
+              hidden
+            />
           </div>
-          <div class="input-label-container">
-            <input type="radio" name="option-food" id="option-ribbe" />
-            <label for="option-ribbe">Ribbe</label>
-          </div>
-          <div class="input-label-container">
-            <input type="radio" name="option-food" id="option-other" />
-            <label for="option-other">Annet</label>
-          </div>
-          <input
-            type="text"
-            name="input-option-other"
-            id="input-option-other"
-            placeholder="Spesifiser"
-          />
           <div class="input-label-container">
             <input type="checkbox" name="option-alcohol" id="option-alcohol" />
             <label for="option-alcohol">Alkohol</label>
