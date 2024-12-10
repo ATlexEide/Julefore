@@ -9,9 +9,11 @@ radioMenu.addEventListener("click", () => {
   if (specifyOtherFoodRadio.checked) {
     specifyOtherFoodInput.removeAttribute("hidden");
     specifyOtherFoodInput.removeAttribute("disabled");
+    specifyOtherFoodInput.setAttribute("required", "");
   } else {
     specifyOtherFoodInput.setAttribute("hidden", "");
     specifyOtherFoodInput.setAttribute("disabled", "");
+    petListInput.removeAttribute("required");
   }
 });
 hasPetInput.addEventListener("click", () => {
@@ -19,8 +21,10 @@ hasPetInput.addEventListener("click", () => {
   if (hasPetInput.checked) {
     petListInput.removeAttribute("hidden");
     petListInput.removeAttribute("disabled");
+    specifyOtherFoodInput.setAttribute("required", "");
   } else {
     petListInput.setAttribute("hidden", "");
     petListInput.setAttribute("disabled", "");
+    petListInput.removeAttribute("required");
   }
 });

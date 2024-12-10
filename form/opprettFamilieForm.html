@@ -16,6 +16,7 @@
             id="create-family-name"
             type="text"
             placeholder="Familie navn"
+            required
           />
           <div class="input-label-container">
             <label for="create-residents" id="residents-label"
@@ -24,6 +25,7 @@
               name="create-residents"
               id="create-residents"
               type="number"
+              required
             />
           </div>
           <input
@@ -31,25 +33,42 @@
             name="image-upload"
             id="image-upload"
             accept="image/png, image/jpeg"
+            required
           /><button>Upload image</button>
           <textarea
             name="create-description"
             id="create-description"
+            required
           ></textarea>
         </fieldset>
         <fieldset>
           <!-- TODO: Make food options radio buttons instead of checkboxes -->
           <div id="radio-menu">
             <div class="input-label-container">
-              <input type="radio" name="option-food" id="option-pinnekjøtt" />
+              <input
+                type="radio"
+                name="option-food"
+                id="option-pinnekjøtt"
+                required
+              />
               <label for="option-pinnekjøtt">Pinnekjøtt</label>
             </div>
             <div class="input-label-container">
-              <input type="radio" name="option-food" id="option-ribbe" />
+              <input
+                type="radio"
+                name="option-food"
+                id="option-ribbe"
+                required
+              />
               <label for="option-ribbe">Ribbe</label>
             </div>
             <div class="input-label-container">
-              <input type="radio" name="option-food" id="option-other" />
+              <input
+                type="radio"
+                name="option-food"
+                id="option-other"
+                required
+              />
               <label for="option-other">Annet</label>
             </div>
             <input
