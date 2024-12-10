@@ -38,6 +38,7 @@
         </fieldset>
         <fieldset>
           <legend>Preferanser</legend>
+          // TODO: Make food options radio buttons instead of checkboxes
           <div class="input-label-container">
             <input
               type="checkbox"
@@ -50,8 +51,10 @@
             <input type="checkbox" name="option-ribbe" id="option-ribbe" />
             <label for="option-ribbe">Ribbe</label>
           </div>
-          <input type="checkbox" name="option-other" id="option-other" />
-          <label for="option-other">Annet</label>
+          <div class="input-label-container">
+            <input type="checkbox" name="option-other" id="option-other" />
+            <label for="option-other">Annet</label>
+          </div>
           <input
             type="text"
             name="input-option-other"
@@ -70,8 +73,10 @@
             />
             <label for="option-allergy-friendly">Allergi vennlig mat</label>
           </div>
-          <input type="checkbox" name="option-pets" id="option-pets" />
-          <label for="option-pets">Kjæledyr</label>
+          <div class="input-label-container">
+            <input type="checkbox" name="option-pets" id="option-pets" />
+            <label for="option-pets">Kjæledyr</label>
+          </div>
           <input
             type="text"
             name="input-option-pets"
