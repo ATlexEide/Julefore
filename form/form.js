@@ -35,7 +35,7 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const family = {
     title: document.getElementById("create-family-name").value,
-    image: document.getElementById("image-upload").value,
+    image: "To be added later",
     description: document.getElementById("create-description").value,
     preferences: {
       residents: Number(document.getElementById("create-residents").value),
@@ -57,4 +57,24 @@ submitBtn.addEventListener("click", (e) => {
     },
   };
   console.log(family);
+  sendPostReq(family);
 });
+
+async function sendPostReq(family) {
+  try {
+    const json = JSON.stringify(family);
+    console.log(json);
+    const req = await fetch("http://localhost:8080/families/create", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: json,
+    });
+    const res = await req.json();
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
+}
