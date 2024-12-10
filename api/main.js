@@ -19,7 +19,6 @@ function updateData() {
   fs.writeFile("api/data/families.json", JSON.stringify(families), () => {
     fetchData();
     console.log("Data updated");
-    console.log(families);
   });
 }
 app.use(cors());
@@ -55,11 +54,10 @@ app.delete("/families/:familyId/delete", (req, res) => {
 //// Add a family
 // Expects a body with all family properties
 app.post("/families/create", (req, res) => {
-  console.log(req);
   createFamily(req, families);
   updateData();
-  console.log(families);
   res.send(`Created family`);
+  console.log(families[families.length - 1]);
 });
 
 app.listen(port, () => {
