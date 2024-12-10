@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <dialog open>
+      <form action="#">
+        <fieldset>
+          <legend>Familie info</legend>
+          <input
+            id="create-family-name"
+            type="text"
+            placeholder="Familie navn"
+          />
+          <label for="create-residents"></label
+          ><input name="create-residents" id="create-residents" type="number" />
+          <input type="file" name="image-upload" id="image-upload" /><button>
+            Upload image
+          </button>
+          <textarea
+            name="create-description"
+            id="create-description"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Preferanser</legend>
+          <input
+            type="checkbox"
+            name="option-pinnekjøtt"
+            id="option-pinnekjøtt"
+          />
+          <label for="option-pinnekjøtt"></label>
+          <input type="checkbox" name="option-ribbe" id="option-ribbe" />
+          <label for="option-ribbe"></label>
+          <input type="checkbox" name="option-other" id="option-other" />
+          <label for="option-other"></label>
+          <input
+            type="text"
+            name="input-option-other"
+            id="input-option-other"
+            placeholder="Spesifiser"
+          />
+          <input type="checkbox" name="option-alcohol" id="option-alcohol" />
+          <label for="option-alcohol"></label>
+          <input
+            type="checkbox"
+            name="option-allergy-friendly"
+            id="option-allergy-friendly"
+          />
+          <label for="option-allergy-friendly"></label>
+          <input type="checkbox" name="option-pets" id="option-pets" />
+          <label for="option-pets"></label>
+          <input
+            type="text"
+            name="input-option-pets"
+            id="input-option-pets"
+            placeholder="List opp dyr (kommaseparert liste)"
+          />
+          <input type="checkbox" name="option-gifts" id="option-gifts" />
+          <label for="option-gifts"></label>
+        </fieldset>
+      </form>
+    </dialog>
+  </body>
+</html>
