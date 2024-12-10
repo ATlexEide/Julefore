@@ -35,9 +35,7 @@ input[type="text"] {
   height: 4em;
   gap: 1em;
 }
-input[type="checkbox"] {
-  place-self: start;
-}
+
 textarea {
   height: 60%;
   width: 100%;
