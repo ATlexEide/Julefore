@@ -10,7 +10,7 @@
   <body>
     <dialog open>
       <h1>Opprett Familie</h1>
-      <form action="#" id="create-family-form">
+      <form id="create-family-form">
         <fieldset>
           <input
             id="create-family-name"
@@ -34,7 +34,7 @@
             id="image-upload"
             accept="image/png, image/jpeg"
             required
-          /><button>Upload image</button>
+          />
           <textarea
             name="create-description"
             id="create-description"
@@ -49,6 +49,7 @@
                 type="radio"
                 name="option-food"
                 id="option-pinnekjøtt"
+                value="Pinnekjøtt"
                 required
               />
               <label for="option-pinnekjøtt">Pinnekjøtt</label>
@@ -58,6 +59,7 @@
                 type="radio"
                 name="option-food"
                 id="option-ribbe"
+                value="ribbe"
                 required
               />
               <label for="option-ribbe">Ribbe</label>
@@ -67,6 +69,7 @@
                 type="radio"
                 name="option-food"
                 id="option-other"
+                value="other"
                 required
               />
               <label for="option-other">Annet</label>
@@ -106,6 +109,7 @@
             <input type="checkbox" name="option-gifts" id="option-gifts" />
             <label for="option-gifts">Gaver</label>
           </div>
+          <button id="submit-btn">Opprett familie</button>
         </fieldset>
       </form>
     </dialog>
