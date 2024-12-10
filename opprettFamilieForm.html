@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="opprettFamilie.css" />
+  </head>
+  <body>
+    <dialog open>
+      <h1>Opprett Familie</h1>
+      <form action="#">
+        <fieldset>
+          <legend>Familie info</legend>
+          <input
+            id="create-family-name"
+            type="text"
+            placeholder="Familie navn"
+          />
+          <div class="input-label-container">
+            <label for="create-residents">Antall beboere</label
+            ><input
+              name="create-residents"
+              id="create-residents"
+              type="number"
+            />
+          </div>
+          <input
+            type="file"
+            name="image-upload"
+            id="image-upload"
+            accept="image/png, image/jpeg"
+          /><button>Upload image</button>
+          <textarea
+            name="create-description"
+            id="create-description"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Preferanser</legend>
+          <div class="input-label-container">
+            <input
+              type="checkbox"
+              name="option-pinnekjøtt"
+              id="option-pinnekjøtt"
+            />
+            <label for="option-pinnekjøtt">Pinnekjøtt</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" name="option-ribbe" id="option-ribbe" />
+            <label for="option-ribbe">Ribbe</label>
+          </div>
+          <input type="checkbox" name="option-other" id="option-other" />
+          <label for="option-other">Annet</label>
+          <input
+            type="text"
+            name="input-option-other"
+            id="input-option-other"
+            placeholder="Spesifiser"
+          />
+          <div class="input-label-container">
+            <input type="checkbox" name="option-alcohol" id="option-alcohol" />
+            <label for="option-alcohol">Alkohol</label>
+          </div>
+          <div class="input-label-container">
+            <input
+              type="checkbox"
+              name="option-allergy-friendly"
+              id="option-allergy-friendly"
+            />
+            <label for="option-allergy-friendly">Allergi vennlig mat</label>
+          </div>
+          <input type="checkbox" name="option-pets" id="option-pets" />
+          <label for="option-pets">Kjæledyr</label>
+          <input
+            type="text"
+            name="input-option-pets"
+            id="input-option-pets"
+            placeholder="List opp dyr (kommaseparert liste)"
+          />
+          <div class="input-label-container">
+            <input type="checkbox" name="option-gifts" id="option-gifts" />
+            <label for="option-gifts">Gaver</label>
+          </div>
+        </fieldset>
+      </form>
+    </dialog>
+  </body>
+</html>
