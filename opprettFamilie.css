@@ -16,6 +16,9 @@ dialog {
   display: flex;
   flex-direction: column;
 }
+h1 {
+  text-align: center;
+}
 form {
   display: flex;
   height: 100%;
