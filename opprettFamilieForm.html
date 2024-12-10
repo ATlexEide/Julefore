@@ -11,14 +11,14 @@
       <h1>Opprett Familie</h1>
       <form action="#">
         <fieldset>
-          <legend>Familie info</legend>
           <input
             id="create-family-name"
             type="text"
             placeholder="Familie navn"
           />
           <div class="input-label-container">
-            <label for="create-residents">Antall beboere</label
+            <label for="create-residents" id="residents-label"
+              >Antall beboere</label
             ><input
               name="create-residents"
               id="create-residents"
@@ -37,22 +37,17 @@
           ></textarea>
         </fieldset>
         <fieldset>
-          <legend>Preferanser</legend>
           <!-- TODO: Make food options radio buttons instead of checkboxes -->
           <div class="input-label-container">
-            <input
-              type="checkbox"
-              name="option-pinnekjøtt"
-              id="option-pinnekjøtt"
-            />
+            <input type="radio" name="option-food" id="option-pinnekjøtt" />
             <label for="option-pinnekjøtt">Pinnekjøtt</label>
           </div>
           <div class="input-label-container">
-            <input type="checkbox" name="option-ribbe" id="option-ribbe" />
+            <input type="radio" name="option-food" id="option-ribbe" />
             <label for="option-ribbe">Ribbe</label>
           </div>
           <div class="input-label-container">
-            <input type="checkbox" name="option-other" id="option-other" />
+            <input type="radio" name="option-food" id="option-other" />
             <label for="option-other">Annet</label>
           </div>
           <input
