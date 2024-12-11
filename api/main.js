@@ -38,11 +38,10 @@ app.get("/families/filter/preferences", (req, res) => {
 //// Update a family
 // Expects key value pair for propert(y(ies)) to update
 app.put("/families/:familyId/edit", (req, res) => {
-  console.log(req.params);
   updateFamily(req, families);
   res.send(`Edited family ${req.params.familyId}`);
   updateData();
-  console.log(families);
+  console.log(`Edited family ${req.params.familyId}`);
 });
 // Delete a family
 app.delete("/families/:familyId/delete", (req, res) => {
