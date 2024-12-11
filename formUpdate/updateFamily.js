@@ -63,7 +63,7 @@ radioMenu.addEventListener("click", () => {
   } else {
     specifyOtherFoodInput.setAttribute("hidden", "");
     specifyOtherFoodInput.setAttribute("disabled", "");
-    petListInput.removeAttribute("required");
+    specifyOtherFoodInput.removeAttribute("required");
   }
 });
 hasPetInput.addEventListener("click", () => {
@@ -71,10 +71,58 @@ hasPetInput.addEventListener("click", () => {
   if (hasPetInput.checked) {
     petListInput.removeAttribute("hidden");
     petListInput.removeAttribute("disabled");
-    specifyOtherFoodInput.setAttribute("required", "");
+    petListInput.setAttribute("required", "");
   } else {
     petListInput.setAttribute("hidden", "");
     petListInput.setAttribute("disabled", "");
     petListInput.removeAttribute("required");
   }
+});
+
+const inputs = document.querySelectorAll("input");
+const textarea = document.getElementById("description");
+
+const body = {};
+inputs.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    // console.log(e);
+    console.log(input.id);
+    console.log(input.value);
+    switch (input.id) {
+      case "family-name":
+        body.title = input.value;
+        break;
+      case "residents":
+        body.residents = input.value;
+        break;
+      case "option-pinnekjøtt":
+        body.food = input.value;
+        break;
+      case "option-ribbe":
+        body.food = input.value;
+        break;
+      case "input-option-other":
+        body.food = specifyOtherFoodInput.value;
+        break;
+      case "option-alcohol":
+        body.alcohol = input.checked ? true : false;
+        break;
+      case "option-allergy-friendly":
+        body["allergy_friendly"] = input.checked ? true : false;
+        break;
+      case "option-pets":
+        body.hasPets = input.checked ? true : false;
+        break;
+      case "input-option-pets":
+        body.species = input.value;
+        break;
+      case "option-gifts":
+        body.gifts = input.checked ? true : false;
+        break;
+
+      default:
+        break;
+    }
+    console.log(body);
+  });
 });
