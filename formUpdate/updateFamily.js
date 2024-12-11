@@ -83,6 +83,10 @@ const inputs = document.querySelectorAll("input");
 const textarea = document.getElementById("description");
 
 const body = {};
+textarea.addEventListener("input", (e) => {
+  body.description = textarea.value;
+  console.log(body);
+});
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     // console.log(e);
@@ -126,3 +130,29 @@ inputs.forEach((input) => {
     console.log(body);
   });
 });
+const submitBtn = document.getElementById("submit-btn");
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  sendPutReq(FAMILY, body);
+});
+async function sendPutReq(family, body) {
+  try {
+    const json = JSON.stringify(body);
+    console.log(json);
+    const req = await fetch(
+      `http://localhost:8080/families/${FAMILY.id}/edit`,
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "PUT",
+        body: json,
+      }
+    );
+    const res = await req.json();
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
+}
