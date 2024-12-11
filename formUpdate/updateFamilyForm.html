@@ -4,26 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="opprettFamilie.css" />
+    <link rel="stylesheet" href="../form.css" />
     <script src="./form.js" defer></script>
   </head>
   <body>
     <dialog open>
-      <h1>Opprett Familie</h1>
-      <form id="create-family-form">
+      <h1>Oppdater Familie</h1>
+      <form id="update-family-form">
         <fieldset>
           <input
-            id="create-family-name"
+            id="update-family-name"
             type="text"
             placeholder="Familie navn"
             required
           />
           <div class="input-label-container">
-            <label for="create-residents" id="residents-label"
+            <label for="update-residents" id="residents-label"
               >Antall beboere</label
             ><input
-              name="create-residents"
-              id="create-residents"
+              name="update-residents"
+              id="update-residents"
               type="number"
               required
             />
@@ -35,8 +35,8 @@
             accept="image/png, image/jpeg"
           />
           <textarea
-            name="create-description"
-            id="create-description"
+            name="update-description"
+            id="update-description"
             required
           ></textarea>
         </fieldset>
