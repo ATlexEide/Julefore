@@ -4,29 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="opprettFamilie.css" />
-    <script src="./form.js" defer></script>
+    <link rel="stylesheet" href="../form.css" />
+    <script type="module" src="./updateFamily.js" defer></script>
   </head>
   <body>
     <dialog open>
-      <h1>Opprett Familie</h1>
-      <form id="create-family-form">
+      <h1>Oppdater Familie</h1>
+      <form id="update-family-form">
         <fieldset>
           <input
-            id="create-family-name"
+            id="family-name"
             type="text"
             placeholder="Familie navn"
             required
           />
           <div class="input-label-container">
-            <label for="create-residents" id="residents-label"
-              >Antall beboere</label
-            ><input
-              name="create-residents"
-              id="create-residents"
-              type="number"
-              required
-            />
+            <label for="residents" id="residents-label">Antall beboere</label
+            ><input name="residents" id="residents" type="number" required />
           </div>
           <input
             type="file"
@@ -34,11 +28,7 @@
             id="image-upload"
             accept="image/png, image/jpeg"
           />
-          <textarea
-            name="create-description"
-            id="create-description"
-            required
-          ></textarea>
+          <textarea name="description" id="description" required></textarea>
         </fieldset>
         <fieldset>
           <!-- TODO: Make food options radio buttons instead of checkboxes -->
