@@ -1,8 +1,11 @@
 export function updateFamily(req, families) {
   if (!families) throw new Error("No families provided");
   let family = families.find((family) => {
-    return family.id === Number(req.params.familyId);
+    return family.id === req.params.familyId.toString();
   });
+  console.log(req.params);
+  console.log(family);
+  console.log(req.body);
   for (const [key, value] of Object.entries(req.body)) {
     switch (key) {
       case "title":
@@ -26,7 +29,7 @@ export function updateFamily(req, families) {
       case "gifts":
         family.preferences.gifts = value;
         break;
-      case "pets":
+      case "hasPets":
         family.preferences.pets.hasPets = value;
 
       case "species":
@@ -42,5 +45,4 @@ export function updateFamily(req, families) {
     }
   }
   console.log(family);
-  console.log(req.body);
 }
