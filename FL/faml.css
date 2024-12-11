@@ -15,3 +15,15 @@ body {
 h1 {
   font-size: 50px;
 }
+
+.list {
+  display: grid;
+  background-color: #365632;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 26%;
+}
+
+p {
+  color: #e6be9a;
+  font-size: 30px;
+}
