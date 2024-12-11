@@ -28,6 +28,10 @@ export function updateFamily(req, families) {
         break;
       case "pets":
         family.preferences.pets.hasPets = value;
+
+      case "species":
+        family.preferences.pets.species = value;
+
         break;
       case "residents":
         family.preferences.residents = value;
