@@ -25,7 +25,8 @@ form {
   height: 100%;
   flex-direction: row;
 }
-fieldset {
+.family-info,
+.preferences {
   border: 0;
   padding: 2em;
   display: flex;
