@@ -6,6 +6,7 @@
     <title>Juleforening</title>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="main.js" defer></script>
+    <script type="module" src="/js/form-logic/delete.js"></script>
   </head>
   <body>
     <main>
@@ -175,6 +176,22 @@
             <label for="option-gifts">Gaver</label>
           </div>
           <button id="submit-btn">Opprett familie</button>
+        </fieldset>
+      </form>
+    </dialog>
+    <!-- Delete family dialog -->
+    <dialog id="delete-family-dialog" open>
+      <h2 class="form-header">Slett Familie</h2>
+      <form id="delete-family-form">
+        <fieldset class="family-info">
+          <select name="select-family" id="select-family">
+            <option value="" selected disabled hidden>
+              -- Velg en familie --
+            </option>
+          </select>
+        </fieldset>
+        <fieldset class="preferences">
+          <button id="delete-btn">Slett familie</button>
         </fieldset>
       </form>
     </dialog>
