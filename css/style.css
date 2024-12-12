@@ -102,6 +102,7 @@ input:disabled {
 }
 #create-family-dialog[open] {
   font-size: 1.5rem;
+  margin: auto;
   width: 60%;
   height: 80%;
   place-self: center;
