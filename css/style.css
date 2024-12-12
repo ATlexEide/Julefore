@@ -101,7 +101,8 @@ input:disabled {
   border: none;
   opacity: 0.5;
 }
-#create-family-dialog[open] {
+#create-family-dialog[open],
+#delete-family-dialog[open] {
   font-size: 1.5rem;
   margin: auto;
   width: 60%;
@@ -110,13 +111,23 @@ input:disabled {
   display: flex;
   flex-direction: column;
 }
+#delete-family-dialog[open] {
+  height: 30%;
+}
+#delete-btn {
+  margin: 0;
+}
 .form-header {
   text-align: center;
 }
-#create-family-form {
+#create-family-form,
+#delete-family-form {
   display: flex;
   height: 100%;
   flex-direction: row;
+}
+#delete-family-form fieldset {
+  justify-content: center;
 }
 .family-info,
 .preferences {
