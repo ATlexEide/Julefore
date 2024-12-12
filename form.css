@@ -1,5 +1,5 @@
 * {
-  margin-top: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -56,5 +56,23 @@ label {
 .input-label-container {
   display: flex;
   padding-left: auto;
+  align-items: center;
+}
+
+#delete-dialog {
+  height: 20%;
+
+  width: 50%;
+}
+
+#delete-dialog button,
+#delete-dialog select {
+  height: 3rem;
+  width: 90%;
+}
+#delete-dialog fieldset {
+  padding: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
