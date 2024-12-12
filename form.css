@@ -44,7 +44,7 @@ input[type="checkbox"] {
   margin: 0;
 }
 
-textarea {
+.description-input {
   height: 50%;
   width: 100%;
   resize: vertical;
