@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juleforening</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="form.css" />
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
@@ -46,6 +47,110 @@
         <h2>Slett eksisterende familie</h2>
         <button id="delete-family-btn">Slett en eksisterende familie</button>
       </section>
+    </dialog>
+    <!-- Create family form -->
+    <dialog id="create-family-dialog">
+      <h1>Opprett Familie</h1>
+      <form id="create-family-form">
+        <fieldset>
+          <input
+            id="create-family-name"
+            type="text"
+            placeholder="Familie navn"
+            required
+          />
+          <div class="input-label-container">
+            <label for="create-residents" id="residents-label"
+              >Antall beboere</label
+            ><input
+              name="create-residents"
+              id="create-residents"
+              type="number"
+              required
+            />
+          </div>
+          <input
+            type="file"
+            name="image-upload"
+            id="image-upload"
+            accept="image/png, image/jpeg"
+          />
+          <textarea
+            name="create-description"
+            id="create-description"
+            required
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <div id="radio-menu">
+            <div class="input-label-container">
+              <input
+                type="radio"
+                name="option-food"
+                id="option-pinnekjøtt"
+                value="Pinnekjøtt"
+                required
+              />
+              <label for="option-pinnekjøtt">Pinnekjøtt</label>
+            </div>
+            <div class="input-label-container">
+              <input
+                type="radio"
+                name="option-food"
+                id="option-ribbe"
+                value="ribbe"
+                required
+              />
+              <label for="option-ribbe">Ribbe</label>
+            </div>
+            <div class="input-label-container">
+              <input
+                type="radio"
+                name="option-food"
+                id="option-other"
+                value="other"
+                required
+              />
+              <label for="option-other">Annet</label>
+            </div>
+            <input
+              type="text"
+              name="input-option-other"
+              id="input-option-other"
+              placeholder="Spesifiser"
+              hidden
+            />
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" name="option-alcohol" id="option-alcohol" />
+            <label for="option-alcohol">Alkohol</label>
+          </div>
+          <div class="input-label-container">
+            <input
+              type="checkbox"
+              name="option-allergy-friendly"
+              id="option-allergy-friendly"
+            />
+            <label for="option-allergy-friendly">Allergi vennlig mat</label>
+          </div>
+          <div class="input-label-container">
+            <input type="checkbox" name="option-pets" id="option-pets" />
+            <label for="option-pets">Kjæledyr</label>
+          </div>
+          <input
+            type="text"
+            name="input-option-pets"
+            id="input-option-pets"
+            placeholder="List opp dyr (kommaseparert liste)"
+            hidden
+          />
+          <div class="input-label-container">
+            <input type="checkbox" name="option-gifts" id="option-gifts" />
+            <label for="option-gifts">Gaver</label>
+          </div>
+          <button id="submit-btn">Opprett familie</button>
+        </fieldset>
+      </form>
     </dialog>
   </body>
 </html>
