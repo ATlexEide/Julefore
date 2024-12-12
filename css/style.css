@@ -76,7 +76,7 @@ button:hover {
   transition-duration: 0.9s;
 }
 
-dialog {
+dialog[open] {
   margin-top: auto;
   width: 80%;
   height: 40%;
