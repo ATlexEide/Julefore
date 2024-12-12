@@ -99,7 +99,7 @@ dialog section {
 input:disabled {
   border: none;
 }
-#create-family-dialog {
+#create-family-dialog[open] {
   font-size: 1.5rem;
   width: 60%;
   height: 80%;
