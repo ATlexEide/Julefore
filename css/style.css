@@ -73,3 +73,17 @@ button:hover {
   color: black;
   transition-duration: 0.9s;
 }
+
+dialog {
+  margin-top: auto;
+  width: 80%;
+  height: 40%;
+  display: flex;
+}
+dialog section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: violet;
+  height: 100%;
+}
