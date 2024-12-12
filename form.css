@@ -8,9 +8,8 @@ body {
   width: 100vw;
   display: flex;
 }
-dialog {
+#create-family-dialog {
   font-size: 1.5rem;
-  display: flex;
   width: 60%;
   height: 80%;
   place-self: center;
