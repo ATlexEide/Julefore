@@ -16,3 +16,21 @@ families.forEach((fam) => {
   option.textContent = fam.title;
   selectMenu.appendChild(option);
 });
+
+const deleteBtn = document.getElementById("delete-btn");
+deleteBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!selectMenu.value) throw new Error("No family selected");
+  sendDeleteReq(selectMenu.value);
+});
+async function sendDeleteReq(family) {
+  try {
+    const req = await fetch(`http://localhost:8080/families/${family}/delete`, {
+      method: "DELETE",
+    });
+    const res = await req.json();
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
+}
