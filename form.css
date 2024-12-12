@@ -19,7 +19,7 @@ body {
 .form-header {
   text-align: center;
 }
-form {
+#create-family-form {
   display: flex;
   height: 100%;
   flex-direction: row;
