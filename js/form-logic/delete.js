@@ -22,6 +22,7 @@ deleteBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!selectMenu.value) throw new Error("No family selected");
   sendDeleteReq(selectMenu.value);
+  document.getElementById("delete-family-dialog").close();
 });
 async function sendDeleteReq(family) {
   try {
