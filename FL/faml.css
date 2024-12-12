@@ -4,7 +4,7 @@ body {
 }
 
 #navbar {
-  background-color: #8b181d;
+  background-color: #e6be9a;
   color: white;
   width: 100vw;
   height: 20svh;
@@ -14,4 +14,110 @@ body {
 
 h1 {
   font-size: 50px;
+  color: #242424;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 35px;
+
+  padding-right: 20px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+#one {
+  background-color: #365632;
+  padding: 20px 20px;
+  color: white;
+}
+
+#two {
+  color: white;
+  background-color: #8b181d;
+  padding: 20px 20px;
+}
+
+img {
+  width: 250px;
+  height: 220px;
+}
+
+input {
+  margin-top: 40px;
+  width: 40px;
+  height: 15px;
+}
+
+label {
+  font-size: 25px;
+}
+
+input#pinnekjøtt {
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+label#pinnekjøtt {
+  font-size: 15px;
+}
+
+input#ribbe {
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+label#ribbe {
+  font-size: 15px;
+}
+
+input#vegetar {
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+
+label#vegetar {
+  font-size: 15px;
+}
+
+input#liten {
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+
+label#liten {
+  font-size: 15px;
+}
+
+input#middels {
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+
+label#middels {
+  font-size: 15px;
+}
+
+input#stor {
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+}
+
+label#stor {
+  font-size: 15px;
 }
