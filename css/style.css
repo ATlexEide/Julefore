@@ -81,6 +81,7 @@ button:hover {
 }
 
 dialog[open] {
+  margin: auto;
   margin-top: auto;
   width: 80%;
   height: 40%;
