@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juleforening</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="/js/form-logic/delete.js"></script>
   </head>
   <body>
     <main>
@@ -27,24 +29,171 @@
         </section>
 
         <section id="sidebar">
-          <button>Liste over familier</button>
+          <a href="/pages/faml.html"><button>Liste over familier</button></a>
 
-          <button>Legg til/Opprett famlie</button>
+          <button id="family-action-btn">Legg til/Opprett famlie</button>
         </section>
       </section>
     </main>
-    <dialog open>
+    <dialog id="select-action-menu">
       <section>
         <figure>
           <img src="" alt="" />
         </figure>
         <h2>Opprett nye familier</h2>
-        <button>Opprett en ny familie</button>
+        <button id="create-family-btn">Opprett en ny familie</button>
       </section>
       <section>
         <h2>Slett eksisterende familie</h2>
-        <button>Slett en eksisterende familie</button>
+        <button id="delete-family-btn">Slett en eksisterende familie</button>
       </section>
+    </dialog>
+    <!-- Create family form -->
+    <dialog id="create-family-dialog">
+      <h2 class="form-header">Opprett Familie</h2>
+      <form id="create-family-form">
+        <fieldset class="family-info">
+          <input
+            class="family-name-input form-input"
+            id="create-family-name"
+            type="text"
+            placeholder="Familie navn"
+            required
+          />
+          <div class="input-label-container">
+            <label for="create-residents" id="residents-label"
+              >Antall beboere</label
+            ><input
+              class="residents-input form-input"
+              name="create-residents"
+              id="create-residents"
+              type="number"
+              required
+            />
+          </div>
+          <input
+            class="file-input form-input"
+            type="file"
+            name="image-upload"
+            id="image-upload"
+            accept="image/png, image/jpeg"
+            disabled
+          />
+          <textarea
+            class="description-input form-input"
+            name="create-description"
+            id="create-description"
+            placeholder="Skriv en kort beskrivelse av familien"
+            required
+          ></textarea>
+        </fieldset>
+        <fieldset class="preferences">
+          <div id="radio-menu">
+            <div class="input-label-container">
+              <input
+                class="form-input"
+                type="radio"
+                name="option-food"
+                id="option-pinnekjøtt"
+                value="Pinnekjøtt"
+                required
+              />
+              <label for="option-pinnekjøtt">Pinnekjøtt</label>
+            </div>
+            <div class="input-label-container">
+              <input
+                class="form-input"
+                type="radio"
+                name="option-food"
+                id="option-ribbe"
+                value="ribbe"
+                required
+              />
+              <label for="option-ribbe">Ribbe</label>
+            </div>
+            <div class="input-label-container">
+              <input
+                class="form-input"
+                type="radio"
+                name="option-food"
+                id="option-other"
+                value="other"
+                required
+              />
+              <label for="option-other">Annet</label>
+            </div>
+            <input
+              class="form-input"
+              type="text"
+              name="input-option-other"
+              id="input-option-other"
+              placeholder="Spesifiser"
+              hidden
+            />
+          </div>
+          <div class="input-label-container">
+            <input
+              class="form-input"
+              type="checkbox"
+              name="option-alcohol"
+              id="option-alcohol"
+            />
+            <label for="option-alcohol">Alkohol</label>
+          </div>
+          <div class="input-label-container">
+            <input
+              class="form-input"
+              type="checkbox"
+              name="option-allergy-friendly"
+              id="option-allergy-friendly"
+            />
+            <label for="option-allergy-friendly">Allergi vennlig mat</label>
+          </div>
+          <div class="input-label-container">
+            <input
+              class="form-input"
+              type="checkbox"
+              name="option-pets"
+              id="option-pets"
+            />
+            <label for="option-pets">Kjæledyr</label>
+          </div>
+          <input
+            class="form-input"
+            type="text"
+            name="input-option-pets"
+            id="input-option-pets"
+            placeholder="List opp dyr (kommaseparert liste)"
+            hidden
+          />
+          <div class="input-label-container">
+            <input
+              class="form-input"
+              type="checkbox"
+              name="option-gifts"
+              id="option-gifts"
+            />
+            <label for="option-gifts">Gaver</label>
+          </div>
+          <button id="submit-btn">Opprett familie</button>
+        </fieldset>
+      </form>
+    </dialog>
+    <!-- Delete family dialog -->
+    <dialog id="delete-family-dialog">
+      <h2 class="form-header">Slett Familie</h2>
+      <form id="delete-family-form">
+        <fieldset class="family-info">
+          <select name="select-family" id="select-family">
+            <option value="" selected disabled hidden>
+              -- Velg en familie --
+            </option>
+          </select>
+        </fieldset>
+        <fieldset class="preferences">
+          <button id="delete-btn">Slett familie</button>
+        </fieldset>
+      </form>
     </dialog>
   </body>
 </html>

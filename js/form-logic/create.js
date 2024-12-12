@@ -58,6 +58,7 @@ submitBtn.addEventListener("click", (e) => {
   };
   console.log(family);
   sendPostReq(family);
+  document.getElementById("create-family-dialog").close();
 });
 
 async function sendPostReq(family) {
