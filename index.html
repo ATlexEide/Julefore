@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juleforening</title>
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
@@ -50,7 +49,7 @@
     </dialog>
     <!-- Create family form -->
     <dialog id="create-family-dialog">
-      <h1 class="form-header">Opprett Familie</h1>
+      <h2 class="form-header">Opprett Familie</h2>
       <form id="create-family-form">
         <fieldset class="family-info">
           <input
@@ -79,10 +78,12 @@
             accept="image/png, image/jpeg"
             disabled
           />
+          <!-- <label for="create-description">Beskrivelse:</label> -->
           <textarea
             class="description-input form-input"
             name="create-description"
             id="create-description"
+            placeholder="Skriv en kort beskrivelse av familien"
             required
           ></textarea>
         </fieldset>
