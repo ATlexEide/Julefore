@@ -55,5 +55,6 @@ app.post("/families/create", (req, res) => {
 });
 
 app.listen(port, () => {
+  console.log(`Server runnning on port ${port}`);
   fetchData();
 });
