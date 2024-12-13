@@ -5,10 +5,9 @@ async function getFamilies() {
     const res = await req.json();
     return res;
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
-console.log(families[families.length - 1]);
 const selectMenu = document.getElementById("select-family");
 families.forEach((fam) => {
   const option = document.createElement("option");
@@ -30,8 +29,7 @@ async function sendDeleteReq(family) {
       method: "DELETE",
     });
     const res = await req.json();
-    console.log(res);
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }

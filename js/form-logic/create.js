@@ -7,7 +7,6 @@ const hasPetInput = document.getElementById("option-pets");
 const petListInput = document.getElementById("input-option-pets");
 const submitBtn = document.getElementById("submit-btn");
 radioMenu.addEventListener("click", () => {
-  console.log("yipp");
   if (specifyOtherFoodRadio.checked) {
     specifyOtherFoodInput.removeAttribute("hidden");
     specifyOtherFoodInput.removeAttribute("disabled");
@@ -19,7 +18,6 @@ radioMenu.addEventListener("click", () => {
   }
 });
 hasPetInput.addEventListener("click", () => {
-  console.log("yipp");
   if (hasPetInput.checked) {
     petListInput.removeAttribute("hidden");
     petListInput.removeAttribute("disabled");
@@ -56,7 +54,6 @@ submitBtn.addEventListener("click", (e) => {
       gifts: document.getElementById("option-gifts").checked ? true : false,
     },
   };
-  console.log(family);
   sendPostReq(family);
   document.getElementById("create-family-dialog").close();
 });
@@ -64,7 +61,6 @@ submitBtn.addEventListener("click", (e) => {
 async function sendPostReq(family) {
   try {
     const json = JSON.stringify(family);
-    console.log(json);
     const req = await fetch("http://localhost:8080/families/create", {
       headers: {
         Accept: "application/json",
@@ -74,8 +70,7 @@ async function sendPostReq(family) {
       body: json,
     });
     const res = await req.json();
-    console.log(res);
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
