@@ -91,7 +91,6 @@ dialog section {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: violet;
   height: 100%;
 }
 
@@ -184,4 +183,38 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#select-action-menu {
+  text-align: center;
+}
+
+.icon {
+  padding-top: 30px;
+  font-size: 50px;
+}
+
+.cre-del {
+  padding-top: 10px;
+  font-size: 40px;
+  color: #242424;
+  font-weight: bold;
+  border-bottom: solid 2px black;
+}
+
+#create-family-btn,
+#delete-family-btn {
+  margin: auto;
+  background-color: #ffff;
+  color: #242424;
+  border: solid 2px #242424;
+  width: 300px;
+}
+
+#create {
+  background-color: #365632;
+}
+
+#delete {
+  background-color: #8b181d;
 }
