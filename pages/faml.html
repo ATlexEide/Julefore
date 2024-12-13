@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Familieliste</title>
     <link rel="stylesheet" href="faml.css" />
+    <script type="module" src="../js/filterPreferences.js"></script>
   </head>
   <body>
     <header>
@@ -16,28 +17,58 @@
     <section class="list">
       <div id="one">
         <h2>Huk av det du kan tilpasse familiene:</h2>
-        <input type="checkbox" id="food" />
-        <label for="food">Mat</label> <br />
-        <input type="checkbox" id="pinnekjøtt" />
-        <label for="pinnekjøtt" id="pinnekjøtt">Pinnekjøtt</label><br />
-        <input type="checkbox" id="ribbe" />
-        <label for="ribbe" id="ribbe">Ribbe</label><br />
-        <input type="checkbox" id="vegetar" />
-        <label for="vegetar" id="vegetar">Vegetar</label><br />
-        <input type="checkbox" id="gift" />
-        <label for="gift">Gaver</label> <br />
-        <input type="checkbox" id="allergy" />
-        <label for="allergy">Allergivennlig</label> <br />
-        <input type="checkbox" id="alcohol" />
-        <label for="alcohol">Alkohol</label> <br />
-        <input type="checkbox" id="members" />
+        <input
+          class="food"
+          type="radio"
+          name="food"
+          id="filter-pinnekjøtt"
+          value="pinnekjøtt"
+        />
+        <label for="filter-pinnekjøtt" id="label-pinnekjøtt">Pinnekjøtt</label
+        ><br />
+        <input
+          class="food"
+          type="radio"
+          name="food"
+          id="filter-ribbe"
+          value="ribbe"
+        />
+        <label for="filter-ribbe" id="label-ribbe">Ribbe</label><br />
+        <input
+          class="food"
+          type="radio"
+          name="food"
+          id="filter-other"
+          value="other"
+        />
+        <label for="filter-other" id="other">Annet</label><br />
+        <input type="checkbox" name="hasGifts" id="filter-gifts" value="true" />
+        <label for="filter-gifts">Gaver</label> <br />
+        <input
+          type="checkbox"
+          name="allergy-friendly"
+          id="filter-allergy-friendly"
+          value="true"
+        />
+        <label for="filter-allergy-friendly">Allergivennlig</label> <br />
+        <input
+          type="checkbox"
+          name="alcohol"
+          id="filter-alcohol"
+          value="true"
+        />
+        <label for="filter-alcohol">Alkohol</label> <br />
+        <input type="checkbox" name="hasPets" id="filter-pets" value="true" />
+        <label for="filter-pets">Dyr</label> <br />
+        <input disabled type="checkbox" name="residents" id="members" />
         <label for="members">Antall personer</label> <br />
-        <input type="checkbox" id="liten" />
+        <input disabled type="checkbox" id="liten" />
         <label for="liten" id="liten">1-3</label><br />
-        <input type="checkbox" id="middels" />
+        <input disabled type="checkbox" id="middels" />
         <label for="middels" id="middels">4-7</label> <br />
-        <input type="checkbox" id="stor" />
+        <input disabled type="checkbox" id="stor" />
         <label for="stor" id="stor">8+</label>
+        <button id="apply-filter-btn">Apply filters</button>
       </div>
       <div id="two">
         <article class="families" id="firstfamily">
