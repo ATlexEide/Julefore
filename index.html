@@ -8,6 +8,10 @@
     <script type="module" src="main.js" defer></script>
     <script type="module" src="/js/form-logic/delete.js"></script>
     <script type="module" src="/js/form-logic/create.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7d8b2b4f74.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main>
@@ -37,15 +41,18 @@
       </section>
     </main>
     <dialog id="select-action-menu">
-      <section>
-        <figure>
-          <img src="" alt="" />
+      <section id="create">
+        <figure class="icon">
+          <i class="fa-solid fa-plus"> </i>
         </figure>
-        <h2>Opprett nye familier</h2>
+        <h2 class="cre-del">Opprett nye familier</h2>
         <button id="create-family-btn">Opprett en ny familie</button>
       </section>
-      <section>
-        <h2>Slett eksisterende familie</h2>
+      <section id="delete">
+        <figure class="icon">
+          <i class="fa-solid fa-minus"></i>
+        </figure>
+        <h2 class="cre-del">Slett eksisterende familie</h2>
         <button id="delete-family-btn">Slett en eksisterende familie</button>
       </section>
     </dialog>
