@@ -5,6 +5,7 @@ applyBtn.addEventListener("click", () => {
   for (const input of inputs) {
     if (input.checked) filter += `&${input.name}=${input.value}`;
   }
+  // TODO: UPDATE AND DISPLAY FAMILIES
   let filteredFamilies = sendGetFilterReq(filter);
 });
 
