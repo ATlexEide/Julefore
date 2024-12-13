@@ -6,8 +6,8 @@ import {
   filterByPets,
 } from "./filters.js";
 export function filterFamilies(parameters, families) {
-  if (Object.keys(parameters).length === 0)
-    throw new Error("no parameters provided");
+  console.log(parameters);
+  if (Object.keys(parameters).length === 0) return families;
   let filtered = families;
   for (const [param, value] of Object.entries(parameters)) {
     switch (param) {

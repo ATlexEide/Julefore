@@ -1,14 +1,16 @@
-async function fetchFamilies() {
+export async function fetchFamilies() {
   try {
     const req = await fetch("/api/data/families.json");
     const res = await req.json();
     return res;
   } catch (error) {}
 }
-const families = await fetchFamilies();
-console.log(families);
-const familyList = document.getElementById("two");
-export async function displayFamilies() {
+
+export function displayFamilies(families) {
+  console.log("display: ", families);
+  const familyList = document.getElementById("two");
+  familyList.textContent = "";
+  if (!families) return;
   families.forEach((family) => {
     const article = document.createElement("article");
     article.classList.add("family-card");
@@ -27,6 +29,4 @@ export async function displayFamilies() {
     familyList.appendChild(article);
   });
 }
-displayFamilies();
-
 //const familySelect = document.querySelector("");
