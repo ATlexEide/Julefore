@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Familieliste</title>
     <link rel="stylesheet" href="faml.css" />
+    <script type="module" src="../js/filterPreferences.js"></script>
   </head>
   <body>
     <header>
@@ -17,36 +18,49 @@
       <div id="one">
         <h2>Huk av det du kan tilpasse familiene:</h2>
         <input
+          class="food"
           type="radio"
-          name="filter-food"
+          name="food"
           id="filter-pinnekjøtt"
           value="pinnekjøtt"
         />
         <label for="filter-pinnekjøtt" id="label-pinnekjøtt">Pinnekjøtt</label
         ><br />
         <input
+          class="food"
           type="radio"
-          name="filter-food"
+          name="food"
           id="filter-ribbe"
           value="ribbe"
         />
         <label for="filter-ribbe" id="label-ribbe">Ribbe</label><br />
         <input
+          class="food"
           type="radio"
-          name="filter-food"
+          name="food"
           id="filter-other"
           value="other"
         />
         <label for="filter-other" id="other">Annet</label><br />
-        <input type="checkbox" id="filter-gifts" />
+        <input type="checkbox" name="hasGifts" id="filter-gifts" value="true" />
         <label for="filter-gifts">Gaver</label> <br />
-        <input type="checkbox" id="filter-allergy-friendly" />
+        <input
+          type="checkbox"
+          name="allergy-friendly"
+          id="filter-allergy-friendly"
+          value="true"
+        />
         <label for="filter-allergy-friendly">Allergivennlig</label> <br />
-        <input type="checkbox" id="filter-alcohol" />
+        <input
+          type="checkbox"
+          name="alcohol"
+          id="filter-alcohol"
+          value="true"
+        />
         <label for="filter-alcohol">Alkohol</label> <br />
-        <input type="checkbox" id="filter-pets" />
+        <input type="checkbox" name="hasPets" id="filter-pets" value="true" />
         <label for="filter-pets">Dyr</label> <br />
-        <input disabled type="checkbox" id="members" />
+        <input disabled type="checkbox" name="residents" id="members" />
         <label for="members">Antall personer</label> <br />
         <input disabled type="checkbox" id="liten" />
         <label for="liten" id="liten">1-3</label><br />
