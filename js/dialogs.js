@@ -14,7 +14,6 @@ export function addDialogButtonListeners(document) {
     createFamilyDialog.showModal();
   });
   deleteFamilyBtn.addEventListener("click", () => {
-    console.log("yippeeeee");
     actionDialog.close();
     deleteFamilyDialog.showModal();
   });
