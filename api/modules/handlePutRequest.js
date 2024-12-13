@@ -3,9 +3,6 @@ export function updateFamily(req, families) {
   let family = families.find((family) => {
     return family.id === req.params.familyId.toString();
   });
-  console.log(req.params);
-  console.log(family);
-  console.log(req.body);
   for (const [key, value] of Object.entries(req.body)) {
     switch (key) {
       case "title":
@@ -44,5 +41,4 @@ export function updateFamily(req, families) {
         throw new Error(`Unknown propterty: ${key}`);
     }
   }
-  console.log(family);
 }
