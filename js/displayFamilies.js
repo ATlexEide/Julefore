@@ -7,8 +7,10 @@ export async function fetchFamilies() {
 }
 
 export function displayFamilies(families) {
+  console.log("display: ", families);
   const familyList = document.getElementById("two");
   familyList.textContent = "";
+  if (!families) return;
   families.forEach((family) => {
     const article = document.createElement("article");
     article.classList.add("family-card");
