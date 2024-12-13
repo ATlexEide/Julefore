@@ -121,3 +121,16 @@ input#stor {
 label#stor {
   font-size: 15px;
 }
+
+.family-card {
+  background: radial-gradient(#e6be9a, #6e3f14);
+}
+
+.figure-card {
+}
+
+.title-card {
+  color: white;
+}
+.image {
+}
