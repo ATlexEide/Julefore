@@ -33,11 +33,3 @@ export function filterFamilies(parameters, families) {
   }
   return filtered;
 }
-
-// function filterFamilies(param, value, families) {
-//   families.forEach((family) => {
-//     if (family.preferences[param] === value) {
-//       filtered.push(family);
-//     }
-//   });
-// }
