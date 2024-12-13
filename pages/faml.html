@@ -16,14 +16,28 @@
     <section class="list">
       <div id="one">
         <h2>Huk av det du kan tilpasse familiene:</h2>
-        <input type="checkbox" id="food" />
-        <label for="food">Mat</label> <br />
-        <input type="checkbox" id="pinnekjøtt" />
-        <label for="pinnekjøtt" id="pinnekjøtt">Pinnekjøtt</label><br />
-        <input type="checkbox" id="ribbe" />
-        <label for="ribbe" id="ribbe">Ribbe</label><br />
-        <input type="checkbox" id="vegetar" />
-        <label for="vegetar" id="vegetar">Vegetar</label><br />
+        <input
+          type="radio"
+          name="filter-food"
+          id="filter-pinnekjøtt"
+          value="pinnekjøtt"
+        />
+        <label for="filter-pinnekjøtt" id="label-pinnekjøtt">Pinnekjøtt</label
+        ><br />
+        <input
+          type="radio"
+          name="filter-food"
+          id="filter-ribbe"
+          value="ribbe"
+        />
+        <label for="filter-ribbe" id="label-ribbe">Ribbe</label><br />
+        <input
+          type="radio"
+          name="filter-food"
+          id="filter-other"
+          value="other"
+        />
+        <label for="filter-other" id="other">Annet</label><br />
         <input type="checkbox" id="gift" />
         <label for="gift">Gaver</label> <br />
         <input type="checkbox" id="allergy" />
