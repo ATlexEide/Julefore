@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Familieliste</title>
+    <link rel="stylesheet" href="faml.css" />
+    <script type="module" src="../js/filterPreferences.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <h1>Familieliste</h1>
+      </nav>
+    </header>
+
+    <section class="list">
+      <div id="one">
+        <h2>Huk av det du kan tilpasse familiene:</h2>
+        <input
+          class="food"
+          type="radio"
+          name="food"
+          id="filter-pinnekjøtt"
+          value="pinnekjøtt"
+        />
+        <label for="filter-pinnekjøtt" id="label-pinnekjøtt">Pinnekjøtt</label
+        ><br />
+        <input
+          class="food"
+          type="radio"
+          name="food"
+          id="filter-ribbe"
+          value="ribbe"
+        />
+        <label for="filter-ribbe" id="label-ribbe">Ribbe</label><br />
+        <input
+          class="food"
+          type="radio"
+          name="food"
+          id="filter-other"
+          value="other"
+        />
+        <label for="filter-other" id="other">Annet</label><br />
+        <input type="checkbox" name="hasGifts" id="filter-gifts" value="true" />
+        <label for="filter-gifts">Gaver</label> <br />
+        <input
+          type="checkbox"
+          name="allergy-friendly"
+          id="filter-allergy-friendly"
+          value="true"
+        />
+        <label for="filter-allergy-friendly">Allergivennlig</label> <br />
+        <input
+          type="checkbox"
+          name="alcohol"
+          id="filter-alcohol"
+          value="true"
+        />
+        <label for="filter-alcohol">Alkohol</label> <br />
+        <input type="checkbox" name="hasPets" id="filter-pets" value="true" />
+        <label for="filter-pets">Dyr</label> <br />
+        <input disabled type="checkbox" name="residents" id="members" />
+        <label for="members">Antall personer</label> <br />
+        <input disabled type="checkbox" id="liten" />
+        <label for="liten" id="liten">1-3</label><br />
+        <input disabled type="checkbox" id="middels" />
+        <label for="middels" id="middels">4-7</label> <br />
+        <input disabled type="checkbox" id="stor" />
+        <label for="stor" id="stor">8+</label>
+        <button id="apply-filter-btn">Apply filters</button>
+      </div>
+      <div id="two">
+        <article class="families" id="firstfamily">
+          <h3>Familien Edvardsen</h3>
+          <img
+            src="/Images/Firstfamily-picture.jpg"
+            alt="bilde av familien Edvardsen"
+          />
+          <p>
+            Familien Edvardsen fra Bergen består av fire personer, far (42) og
+            mor (39) samt 2 barn - en jente på 6 år og en gutt på 4 år. Familien
+            har et ønske om å forhåpentligvis dele sin julefeiring med andre i
+            år. Ettersom at familien Edvardsen finner det krevende å
+            tilfredstille barna samt gi dem glede på lik linje med andre barn i
+            juletiden, søker familien noen som kan gi meg en minnerik opplevelse
+            i den hellige tid. Familien er alteter og stiller dermed ikke noe
+            krav til matpreferanser. Barna hadde ellers blitt veldig glad med en
+            gave.
+          </p>
+        </article>
+        <h3>Familie 2</h3>
+        <h3>Familie 3</h3>
+        <h3>Familie 4</h3>
+        <h3>Familie 5</h3>
+        <h3>Familie 6</h3>
+        <h3>Familie 7</h3>
+        <h3>Familie 8</h3>
+        <h3>Familie 9</h3>
+        <h3>Familie 10</h3>
+        <h3>Familie 11</h3>
+        <h3>Familie 12</h3>
+        <h3>Familie 13</h3>
+        <h3>Familie 14</h3>
+        <h3>Familie 15</h3>
+        <h3>Familie 16</h3>
+        <h3>Familie 17</h3>
+        <h3>Familie 18</h3>
+        <h3>Familie 19</h3>
+        <h3>Familie 20</h3>
+      </div>
+    </section>
+  </body>
+</html>

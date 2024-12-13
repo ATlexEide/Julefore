@@ -18,13 +18,11 @@ function fetchData() {
 function updateData() {
   fs.writeFile("api/data/families.json", JSON.stringify(families), () => {
     fetchData();
-    console.log("Data updated");
   });
 }
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
-  console.log(req);
   res.send("Server root");
 });
 // Get a list of all families
@@ -41,13 +39,11 @@ app.put("/families/:familyId/edit", (req, res) => {
   updateFamily(req, families);
   res.send(`Edited family ${req.params.familyId}`);
   updateData();
-  console.log(`Edited family ${req.params.familyId}`);
 });
 // Delete a family
 app.delete("/families/:familyId/delete", (req, res) => {
   deleteFamily(req, families);
   updateData();
-  console.log(families);
   res.send(`Deleted family ${req.params.familyId}`);
 });
 //// Add a family
@@ -56,10 +52,8 @@ app.post("/families/create", (req, res) => {
   createFamily(req, families);
   updateData();
   res.send(`Created family`);
-  console.log(families[families.length - 1]);
 });
 
 app.listen(port, () => {
   fetchData();
-  console.log(`Server is running on port ${port}`);
 });

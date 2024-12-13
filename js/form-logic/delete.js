@@ -5,10 +5,9 @@ async function getFamilies() {
     const res = await req.json();
     return res;
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
-console.log(families[families.length - 1]);
 const selectMenu = document.getElementById("select-family");
 families.forEach((fam) => {
   const option = document.createElement("option");
@@ -22,6 +21,7 @@ deleteBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!selectMenu.value) throw new Error("No family selected");
   sendDeleteReq(selectMenu.value);
+  document.getElementById("delete-family-dialog").close();
 });
 async function sendDeleteReq(family) {
   try {
@@ -29,8 +29,7 @@ async function sendDeleteReq(family) {
       method: "DELETE",
     });
     const res = await req.json();
-    console.log(res);
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }

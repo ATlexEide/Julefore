@@ -4,16 +4,14 @@ async function getFamilies() {
     const res = await req.json();
     return res;
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
 const families = await getFamilies();
-console.log(getFamilies());
 const FAMILY = families.find((family) => {
   return family.id === "2232fac2-cf52-4769-ac24-8b3df38ba560";
   // return family.id === "9ecb0a1f-7ff7-4f09-8ace-c73c0f2e1c80";
 });
-console.log(FAMILY);
 const form = document.getElementById("update-family-form");
 const titleInput = document.getElementById("family-name");
 titleInput.value = FAMILY.title;
@@ -55,7 +53,6 @@ const specifyOtherFoodInput = document.getElementById("input-option-other");
 const specifyOtherFoodRadio = document.getElementById("option-other");
 
 radioMenu.addEventListener("click", () => {
-  console.log("yipp");
   if (specifyOtherFoodRadio.checked) {
     specifyOtherFoodInput.removeAttribute("hidden");
     specifyOtherFoodInput.removeAttribute("disabled");
@@ -67,7 +64,6 @@ radioMenu.addEventListener("click", () => {
   }
 });
 hasPetInput.addEventListener("click", () => {
-  console.log("yipp");
   if (hasPetInput.checked) {
     petListInput.removeAttribute("hidden");
     petListInput.removeAttribute("disabled");
@@ -85,13 +81,9 @@ const textarea = document.getElementById("description");
 const body = {};
 textarea.addEventListener("input", (e) => {
   body.description = textarea.value;
-  console.log(body);
 });
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
-    // console.log(e);
-    console.log(input.id);
-    console.log(input.value);
     switch (input.id) {
       case "family-name":
         body.title = input.value;
@@ -127,7 +119,6 @@ inputs.forEach((input) => {
       default:
         break;
     }
-    console.log(body);
   });
 });
 const submitBtn = document.getElementById("submit-btn");
@@ -138,7 +129,6 @@ submitBtn.addEventListener("click", (e) => {
 async function sendPutReq(family, body) {
   try {
     const json = JSON.stringify(body);
-    console.log(json);
     const req = await fetch(
       `http://localhost:8080/families/${FAMILY.id}/edit`,
       {
@@ -151,8 +141,7 @@ async function sendPutReq(family, body) {
       }
     );
     const res = await req.json();
-    console.log(res);
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }

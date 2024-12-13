@@ -6,5 +6,4 @@ export function deleteFamily(req, families) {
   if (!family) throw new Error("Family does not exist");
   const familyIndex = families.indexOf(family);
   families.splice(familyIndex, 1);
-  console.log(familyIndex);
 }
