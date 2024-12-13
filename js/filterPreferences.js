@@ -6,8 +6,6 @@ applyBtn.addEventListener("click", () => {
     if (input.checked) filter += `&${input.name}=${input.value}`;
   }
   let filteredFamilies = sendGetFilterReq(filter);
-  console.log(filter);
-  console.log(filteredFamilies);
 });
 
 async function sendGetFilterReq(filter) {
