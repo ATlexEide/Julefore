@@ -1,1 +1,44 @@
-[{"image":"<image url>","title":"le CREATED familien","description":"<Lorem ipsum>","preferences":{"food":"lutefesk","allergy_friendly":false,"alcohol":true,"gifts":true,"pets":{"hasPets":true,"species":["fæsken"]},"residents":1},"id":"cb83db12-2b1c-41ec-ab98-62438220d678"},{"title":"asda","image":"To be added later","description":"dsa","preferences":{"residents":2,"food":"ribbe","alcohol":false,"allergy_friendly":false,"pets":{"hasPets":false,"species":[]},"gifts":false},"id":"9ecb0a1f-7ff7-4f09-8ace-c73c0f2e1c80"},{"title":"Heccern's familj","image":"To be added later","description":"feir jul med oss fra el' mexico","preferences":{"residents":3,"food":"taco","alcohol":true,"allergy_friendly":false,"pets":{"hasPets":true,"species":["lasse"]},"gifts":false},"id":"2232fac2-cf52-4769-ac24-8b3df38ba560"}]
+[
+  {
+    "image": "https://api.deepai.org/job-view-file/3d316b13-7817-4b01-bc35-f6274b8d7aa7/outputs/output.jpg?art-image=true",
+    "title": "le CREATED familien",
+    "description": "<Lorem ipsum>",
+    "preferences": {
+      "food": "lutefesk",
+      "allergy_friendly": false,
+      "alcohol": true,
+      "gifts": true,
+      "pets": { "hasPets": true, "species": ["fæsken"] },
+      "residents": 1
+    },
+    "id": "cb83db12-2b1c-41ec-ab98-62438220d678"
+  },
+  {
+    "title": "asda",
+    "image": "https://api.deepai.org/job-view-file/3d316b13-7817-4b01-bc35-f6274b8d7aa7/outputs/output.jpg?art-image=true",
+    "description": "dsa",
+    "preferences": {
+      "residents": 2,
+      "food": "ribbe",
+      "alcohol": false,
+      "allergy_friendly": false,
+      "pets": { "hasPets": false, "species": [] },
+      "gifts": false
+    },
+    "id": "9ecb0a1f-7ff7-4f09-8ace-c73c0f2e1c80"
+  },
+  {
+    "title": "Heccern's familj",
+    "image": "https://api.deepai.org/job-view-file/3d316b13-7817-4b01-bc35-f6274b8d7aa7/outputs/output.jpg?art-image=true",
+    "description": "feir jul med oss fra el' mexico",
+    "preferences": {
+      "residents": 3,
+      "food": "taco",
+      "alcohol": true,
+      "allergy_friendly": false,
+      "pets": { "hasPets": true, "species": ["lasse"] },
+      "gifts": false
+    },
+    "id": "2232fac2-cf52-4769-ac24-8b3df38ba560"
+  }
+]
