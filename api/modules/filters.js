@@ -49,7 +49,7 @@ export function filterByPets(value, families = families) {
 export function filterByResidents(value, families = families) {
   const filteredList = [];
   families.forEach((family) => {
-    if (family.preferences.residents.toString() <= value)
+    if (family.preferences.residents <= Number(value))
       filteredList.push(family);
   });
   return filteredList;
