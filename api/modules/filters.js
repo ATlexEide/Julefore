@@ -3,8 +3,8 @@ export function filterByFood(value, families = families) {
   families.forEach((family) => {
     if (
       value === "other" &&
-      (family.preferences.food !== "ribbe" ||
-        family.preferences.food !== "pinnekjøtt")
+      family.preferences.food !== "ribbe" &&
+      family.preferences.food !== "pinnekjøtt"
     ) {
       filteredList.push(family);
     } else if (family.preferences.food === value) {
