@@ -4,6 +4,7 @@ import {
   filterByAlcohol,
   filterByGifts,
   filterByPets,
+  filterByResidents,
 } from "./filters.js";
 export function filterFamilies(parameters, families) {
   console.log(parameters);
@@ -25,6 +26,9 @@ export function filterFamilies(parameters, families) {
         break;
       case "pets":
         filtered = filterByPets(value, filtered);
+        break;
+      case "residents":
+        filtered = filterByResidents(value, filtered);
         break;
 
       default:
