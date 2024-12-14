@@ -14,7 +14,6 @@ applyBtn.addEventListener("click", async () => {
     if (input.checked) filter += `&${input.name}=${input.value}`;
   }
   console.log("filter length: ", filter.length);
-  // TODO: UPDATE AND DISPLAY FAMILIES
   if (!filter.length) {
     return;
   } else {
