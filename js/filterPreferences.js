@@ -46,3 +46,12 @@ async function sendGetFilterReq(filter) {
     return res;
   } catch (error) {}
 }
+
+const cards = document.getElementsByClassName("family-card");
+const dialog = document.getElementById("family-dialog");
+for (const card of cards) {
+  card.addEventListener("click", () => {
+    console.log("yay");
+    dialog.showModal();
+  });
+}
