@@ -46,4 +46,12 @@ export function filterByPets(value, families = families) {
   });
   return filteredList;
 }
+export function filterByResidents(value, families = families) {
+  const filteredList = [];
+  families.forEach((family) => {
+    if (family.preferences.residents.toString() <= value)
+      filteredList.push(family);
+  });
+  return filteredList;
+}
 // TODO: Add filter by residents
