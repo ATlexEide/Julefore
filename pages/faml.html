@@ -60,18 +60,26 @@
         <label for="filter-alcohol">Alkohol</label> <br />
         <input type="checkbox" name="hasPets" id="filter-pets" value="true" />
         <label for="filter-pets">Dyr</label> <br />
-        <input disabled type="checkbox" name="residents" id="members" />
-        <label for="members">Antall personer</label> <br />
-        <input disabled type="checkbox" id="liten" />
-        <label for="liten" id="liten">1-3</label><br />
-        <input disabled type="checkbox" id="middels" />
-        <label for="middels" id="middels">4-7</label> <br />
-        <input disabled type="checkbox" id="stor" />
-        <label for="stor" id="stor">8+</label>
+        <div id="slider-container">
+          <label for="members">Max antall personer:</label> <br />
+          <input
+            type="range"
+            min="1"
+            max="15"
+            value="100"
+            name="residents"
+            id="residents"
+          />
+          <span id="residents-out"></span>
+        </div>
         <button id="remove-filter-btn">Remove filters</button>
         <button id="apply-filter-btn">Apply filters</button>
       </div>
       <div id="two"></div>
     </section>
+
+    <dialog id="family-dialog">
+      <h1>TEST</h1>
+    </dialog>
   </body>
 </html>

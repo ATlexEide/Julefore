@@ -3,8 +3,8 @@ export function filterByFood(value, families = families) {
   families.forEach((family) => {
     if (
       value === "other" &&
-      (family.preferences.food !== "ribbe" ||
-        family.preferences.food !== "pinnekjøtt")
+      family.preferences.food !== "ribbe" &&
+      family.preferences.food !== "pinnekjøtt"
     ) {
       filteredList.push(family);
     } else if (family.preferences.food === value) {
@@ -46,4 +46,11 @@ export function filterByPets(value, families = families) {
   });
   return filteredList;
 }
-// TODO: Add filter by residents
+export function filterByResidents(value, families = families) {
+  const filteredList = [];
+  families.forEach((family) => {
+    if (family.preferences.residents <= Number(value))
+      filteredList.push(family);
+  });
+  return filteredList;
+}

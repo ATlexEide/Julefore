@@ -3,6 +3,13 @@ const inputs = document.getElementsByTagName("input");
 const applyBtn = document.getElementById("apply-filter-btn");
 const removeBtn = document.getElementById("remove-filter-btn");
 
+const slider = document.getElementById("residents");
+const outputResidents = document.getElementById("residents-out");
+outputResidents.textContent = slider.value;
+slider.oninput = () => {
+  outputResidents.textContent = slider.value;
+};
+
 let filter = "";
 let families = await fetchFamilies();
 displayFamilies(families);
@@ -11,10 +18,10 @@ applyBtn.addEventListener("click", async () => {
   console.log("click");
   filter = "";
   for (const input of inputs) {
+    if (input.type === "range") filter += `&${input.name}=${input.value}`;
     if (input.checked) filter += `&${input.name}=${input.value}`;
   }
   console.log("filter length: ", filter.length);
-  // TODO: UPDATE AND DISPLAY FAMILIES
   if (!filter.length) {
     return;
   } else {
@@ -45,4 +52,13 @@ async function sendGetFilterReq(filter) {
     console.log(res);
     return res;
   } catch (error) {}
+}
+
+const cards = document.getElementsByClassName("family-card");
+const dialog = document.getElementById("family-dialog");
+for (const card of cards) {
+  card.addEventListener("click", () => {
+    console.log("yay");
+    dialog.showModal();
+  });
 }
