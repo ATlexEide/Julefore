@@ -33,7 +33,8 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const family = {
     title: document.getElementById("create-family-name").value,
-    image: "To be added later",
+    image:
+      "https://api.deepai.org/job-view-file/3d316b13-7817-4b01-bc35-f6274b8d7aa7/outputs/output.jpg?art-image=true",
     description: document.getElementById("create-description").value,
     preferences: {
       residents: Number(document.getElementById("create-residents").value),

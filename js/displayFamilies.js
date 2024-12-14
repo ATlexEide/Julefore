@@ -19,7 +19,7 @@ export function displayFamilies(families) {
     figure.classList.add("figure-card");
     const img = document.createElement("img");
     img.classList.add("image");
-    //img.src = family.image;
+    img.src = family.image;
     figure.appendChild(img);
     article.appendChild(figure);
     const h3 = document.createElement("h3");
