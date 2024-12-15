@@ -7,6 +7,7 @@ export async function fetchFamilies() {
 }
 const dialog = document.getElementById("family-dialog");
 const familyPicture = document.getElementById("family-picture");
+const familyTitle = document.getElementById("family-title");
 const residentsIcon = document.getElementById("icon-residents");
 const giftsIcon = document.getElementById("icon-gifts");
 const foodIcon = document.getElementById("icon-food");
@@ -22,11 +23,12 @@ export function displayFamilies(families) {
     article.addEventListener("click", () => {
       familyPicture.src = family.image;
       familyPicture.alt = `bilde av ${family.title}`;
+      familyTitle.textContent = family.title;
       residentsIcon.textContent = " " + family.preferences.residents;
       giftsIcon.textContent = family.preferences.gifts
         ? " Har gaver"
         : " Har ikke gaver";
-      foodIcon.textContent = family.preferences.food;
+      foodIcon.textContent = " " + family.preferences.food;
       alcoholIcon.textContent = family.preferences.alcohol ? " Ja" : " Nei";
       dialog.showModal();
     });
