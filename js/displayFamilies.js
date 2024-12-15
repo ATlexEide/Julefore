@@ -12,6 +12,10 @@ const residentsIcon = document.getElementById("icon-residents");
 const giftsIcon = document.getElementById("icon-gifts");
 const foodIcon = document.getElementById("icon-food");
 const alcoholIcon = document.getElementById("icon-alcohol");
+const closeBtn = document.getElementById("close-family-dialog");
+closeBtn.addEventListener("click", () => {
+  dialog.close();
+});
 export function displayFamilies(families) {
   console.log("display: ", families);
   const familyList = document.getElementById("two");
@@ -29,7 +33,9 @@ export function displayFamilies(families) {
         ? " Har gaver"
         : " Har ikke gaver";
       foodIcon.textContent = " " + family.preferences.food;
-      alcoholIcon.textContent = family.preferences.alcohol ? " Ja" : " Nei";
+      alcoholIcon.textContent = family.preferences.alcohol
+        ? " Alkohofri: Nei"
+        : " Alkoholfri: Ja";
       dialog.showModal();
     });
 
