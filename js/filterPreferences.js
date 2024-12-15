@@ -13,7 +13,6 @@ slider.oninput = () => {
 let filter = "";
 let families = await fetchFamilies();
 displayFamilies(families);
-addEventListenerForCards();
 
 applyBtn.addEventListener("click", async () => {
   console.log("click");
@@ -28,12 +27,10 @@ applyBtn.addEventListener("click", async () => {
   } else {
     let filteredFamilies = await updateFamilies(filter);
     displayFamilies(filteredFamilies);
-    addEventListenerForCards();
   }
 });
 removeBtn.addEventListener("click", () => {
   displayFamilies(families);
-  addEventListenerForCards();
   filter = "";
   for (const input of inputs) {
     if (input.checked) input.checked = false;
@@ -55,15 +52,4 @@ async function sendGetFilterReq(filter) {
     console.log(res);
     return res;
   } catch (error) {}
-}
-
-function addEventListenerForCards() {
-  const cards = document.getElementsByClassName("family-card");
-  const dialog = document.getElementById("family-dialog");
-  for (const card of cards) {
-    card.addEventListener("click", () => {
-      console.log("yay");
-      dialog.showModal();
-    });
-  }
 }
