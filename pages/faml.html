@@ -92,7 +92,7 @@
               src="/Images/Firstfamily-picture.jpg"
               alt="Bilde av familien Edvardsen"
             />
-            <h2>Familie navn/tittel</h2>
+            <h2 id="family-title">Familie navn/tittel</h2>
             <h2 class="title">Beskrivelse</h2>
             <p>Beskrivelse</p>
           </section>
@@ -109,7 +109,29 @@
               </section>
             </section>
 
-            <button>Book en julefeiring</button>
+            <div
+              style="
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+              "
+            >
+              <button>Book en julefeiring</button>
+              <button
+                id="close-family-dialog"
+                style="
+                  background-color: red;
+                  color: white;
+                  border-color: black;
+                  border-width: 1px;
+                "
+              >
+                Lukk
+              </button>
+            </div>
           </section>
         </div>
       </div>
