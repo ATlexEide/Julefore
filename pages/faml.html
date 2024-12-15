@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Familieliste</title>
     <link rel="stylesheet" href="faml.css" />
+    <link rel="stylesheet" href="book.css" />
     <script type="module" src="../js/filterPreferences.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7d8b2b4f74.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -77,9 +82,37 @@
       </div>
       <div id="two"></div>
     </section>
-
+    <!-- FAMILY DIALOG -->
     <dialog id="family-dialog">
-      <h1>TEST</h1>
+      <div class="columns">
+        <div class="column">
+          <section class="one">
+            <img
+              id="family-picture"
+              src="/Images/Firstfamily-picture.jpg"
+              alt="Bilde av familien Edvardsen"
+            />
+            <h2>Familie navn/tittel</h2>
+            <h2 class="title">Beskrivelse</h2>
+            <p>Beskrivelse</p>
+          </section>
+        </div>
+        <div class="column">
+          <section class="two">
+            <section class="keys">
+              <h2 class="keyinfo">Nøkkelinformasjon</h2>
+              <section class="symbols">
+                <i id="icon-residents" class="fa-solid fa-people-group"> 4</i>
+                <i id="icon-gifts" class="fa-solid fa-gift">Gaver</i>
+                <i id="icon-food" class="fa-solid fa-utensils">Mat:</i>
+                <i id="icon-alcohol" class="fa-solid fa-wine-bottle">Alcohol</i>
+              </section>
+            </section>
+
+            <button>Book en julefeiring</button>
+          </section>
+        </div>
+      </div>
     </dialog>
   </body>
 </html>
