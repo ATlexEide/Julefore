@@ -14,20 +14,6 @@
     "id": "cb83db12-2b1c-41ec-ab98-62438220d678"
   },
   {
-    "title": "asda",
-    "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "dsa",
-    "preferences": {
-      "residents": 2,
-      "food": "ribbe",
-      "alcohol": false,
-      "allergy_friendly": false,
-      "pets": { "hasPets": false, "species": [] },
-      "gifts": false
-    },
-    "id": "9ecb0a1f-7ff7-4f09-8ace-c73c0f2e1c80"
-  },
-  {
     "title": "Heccern's familj",
     "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "description": "feir jul med oss fra el' mexico",
@@ -40,5 +26,19 @@
       "gifts": false
     },
     "id": "2232fac2-cf52-4769-ac24-8b3df38ba560"
+  },
+  {
+    "title": "Heccerns andre familie",
+    "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Min andre kone og meg",
+    "preferences": {
+      "residents": 2,
+      "food": "pinnekjøtt",
+      "alcohol": false,
+      "allergy_friendly": false,
+      "pets": { "hasPets": true, "species": ["lasse"] },
+      "gifts": false
+    },
+    "id": "49ad96d6-67a6-4ff2-b4cc-cde7ae56cf86"
   }
 ]

@@ -34,7 +34,7 @@ submitBtn.addEventListener("click", (e) => {
   const family = {
     title: document.getElementById("create-family-name").value,
     image:
-      "https://api.deepai.org/job-view-file/3d316b13-7817-4b01-bc35-f6274b8d7aa7/outputs/output.jpg?art-image=true",
+      "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: document.getElementById("create-description").value,
     preferences: {
       residents: Number(document.getElementById("create-residents").value),
