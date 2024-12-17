@@ -50,14 +50,13 @@ button {
   color: white;
   font-weight: bold;
   border-radius: 20px;
-  padding: 5px 15px;
-  display: block;
-  margin-top: 60px;
-  margin-left: 120px;
+  padding: 0.5em;
   align-items: end;
   font-size: large;
 }
-
+#submit-btn {
+  margin: auto;
+}
 h1,
 #welcome {
   color: white;
