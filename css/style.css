@@ -102,6 +102,10 @@ input:disabled {
   border: none;
   opacity: 0.5;
 }
+dialog::backdrop {
+  /* TODO: FIX BACKDROP OPACITY */
+  color: rgb(0, 0, 0, 0.9);
+}
 #create-family-dialog[open],
 #delete-family-dialog[open] {
   display: flex;
