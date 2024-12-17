@@ -201,16 +201,15 @@ label {
   font-weight: bold;
   border-bottom: solid 2px black;
 }
-.cre-del-btn {
-  height: 25%;
-  width: 60%;
-}
+
 #create-family-btn,
 #delete-family-btn {
   margin: auto;
   background-color: #ffff;
   color: #242424;
   border: solid 2px #242424;
+  height: 25%;
+  width: 60%;
 }
 
 #create {
