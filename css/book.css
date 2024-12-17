@@ -70,10 +70,13 @@ p {
 }
 
 i {
-  margin-top: 50px;
-  font-size: 30px;
-  color: #242424;
-  padding-left: 30px;
+  font-size: 2rem;
+  color: #eeffcf;
+  padding: 0.4em;
+}
+i span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 #family-picture {
   width: 80%;

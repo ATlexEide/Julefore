@@ -155,6 +155,7 @@ label#stor {
   align-items: center;
   gap: 1em;
   padding: 2em;
+  border: solid 2px black;
 }
 
 .figure-card {
@@ -163,6 +164,7 @@ label#stor {
 .image {
   width: 100%;
   height: auto;
+  border: solid 2px black;
 }
 .title-card {
   color: white;
