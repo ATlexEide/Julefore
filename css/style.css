@@ -142,6 +142,7 @@ dialog::backdrop {
 }
 .input-2x {
   display: flex;
+  gap: 0.5em;
   width: 100%;
 }
 #create-family-name {
@@ -167,7 +168,13 @@ dialog::backdrop {
 .form-input[type="checkbox"] {
   margin: 0;
 }
-
+#family-picture {
+  width: 100%;
+  justify-content: space-between;
+}
+#family-picture label {
+  opacity: 0.5;
+}
 .description-input {
   height: 100%;
   width: 100%;
@@ -177,7 +184,6 @@ dialog::backdrop {
 }
 label {
   padding: 0 0.4em;
-  width: 100%;
   text-align: start;
 }
 .input-label-container {
