@@ -104,13 +104,13 @@ input:disabled {
 }
 #create-family-dialog[open],
 #delete-family-dialog[open] {
-  font-size: 1.5rem;
-  margin: auto;
-  width: 60%;
-  height: 80%;
-  place-self: center;
   display: flex;
   flex-direction: column;
+  place-self: center;
+  font-size: 1.5rem;
+  height: 80%;
+  width: 60%;
+  margin: auto;
 }
 #delete-family-dialog[open] {
   height: 30%;
