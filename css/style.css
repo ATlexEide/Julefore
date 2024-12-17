@@ -39,6 +39,9 @@ input {
 #heading {
   background-color: #365632;
   width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #sidebar {
@@ -63,10 +66,7 @@ h1,
 #welcome {
   color: white;
   text-align: center;
-  margin-top: 100px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 65px;
+  font-size: 4em;
 }
 
 a {
@@ -197,7 +197,7 @@ label {
 .cre-del {
   padding-top: 10px;
   font-size: 40px;
-  color: #242424;
+  color: #ebebeb;
   font-weight: bold;
   border-bottom: solid 2px black;
 }
