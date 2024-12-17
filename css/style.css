@@ -24,15 +24,12 @@ input {
   background-color: #365632;
   font-size: large;
   font-weight: bold;
-  margin-right: 10%;
-  margin-top: 35px;
-  margin-bottom: 25px;
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
   border: 2px solid #365632;
 }
-
+select {
+  font-size: large;
+  font-weight: bold;
+}
 .columns {
   display: flex;
   height: 100%;
@@ -49,6 +46,11 @@ input {
 #sidebar {
   background-color: #e6be9a;
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+  padding: 2em;
 }
 
 button {
@@ -56,14 +58,13 @@ button {
   color: white;
   font-weight: bold;
   border-radius: 20px;
-  padding: 5px 15px;
-  display: block;
-  margin-top: 60px;
-  margin-left: 120px;
+  padding: 0.5em;
   align-items: end;
   font-size: large;
 }
-
+#submit-btn {
+  margin: auto;
+}
 h1,
 #welcome {
   color: white;
@@ -73,7 +74,6 @@ h1,
 
 a {
   color: white;
-  background-color: #8b181d;
 }
 
 button:hover {
@@ -113,7 +113,7 @@ dialog::backdrop {
   place-self: center;
   font-size: 1.5rem;
   height: 90%;
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 #delete-family-dialog[open] {
@@ -131,8 +131,10 @@ dialog::backdrop {
 #create-family-form,
 #delete-family-form {
   display: flex;
+  height: 100%;
   flex-direction: row;
   padding: 2rem;
+  gap: 1em;
 }
 #delete-family-form fieldset {
   justify-content: center;
@@ -145,8 +147,25 @@ dialog::backdrop {
   gap: 1em;
   border: 0;
 }
-.form-input {
+.input-2x {
+  display: flex;
+  gap: 0.5em;
   width: 100%;
+}
+#create-family-name {
+  padding: 0 1em;
+  width: 100%;
+}
+#create-family-name:placeholder-shown,
+#create-residents:placeholder-shown {
+  text-align: center;
+}
+#create-residents {
+  width: 70%;
+  padding: 0 1em;
+  text-align: right;
+}
+.form-input {
   background-color: whitesmoke;
 }
 .form-input[type="text"],
@@ -156,15 +175,22 @@ dialog::backdrop {
 .form-input[type="checkbox"] {
   margin: 0;
 }
-
+#family-picture {
+  width: 100%;
+  justify-content: space-between;
+}
+#family-picture label {
+  opacity: 0.5;
+}
 .description-input {
-  height: 50%;
+  height: 100%;
   width: 100%;
   resize: vertical;
+  font-size: large;
+  padding: 1em;
 }
 label {
   padding: 0 0.4em;
-  width: 100%;
   text-align: start;
 }
 .input-label-container {
@@ -227,4 +253,14 @@ label {
 }
 #residents-label {
   width: fit-content;
+}
+#radio-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#input-option-other,
+#input-option-pets {
+  padding: 0 1em;
+  width: 50%;
 }

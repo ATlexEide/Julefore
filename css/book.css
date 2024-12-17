@@ -14,26 +14,29 @@ dialog {
 }
 
 .one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  gap: 2em;
   background-color: #8b181d;
   height: 100%;
   width: 50vw;
 }
 
 .two {
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+
   background-color: #365632;
   height: 100%;
   width: 50vw;
-  padding-top: 10px;
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
-img {
-  width: 600px;
-  height: 400px;
-  padding-top: 20px;
-}
 button {
   font-size: 30px;
   width: 400px;
@@ -43,15 +46,13 @@ button {
   background-color: #e6be9a;
 }
 .title {
-  padding-top: 100px;
-  font-size: 32px;
   color: white;
+  font-size: 2rem;
 }
 
 .keyinfo {
   color: white;
-  font-size: 42px;
-  padding-top: 150px;
+  font-size: 3rem;
 }
 
 p {
@@ -62,14 +63,23 @@ p {
   color: #e6be9a;
 }
 
-h2 {
+#family-title {
   color: white;
   font-size: 52px;
+  border-bottom: 1px solid;
 }
 
 i {
-  margin-top: 50px;
-  font-size: 30px;
-  color: #242424;
-  padding-left: 30px;
+  font-size: 2rem;
+  color: #eeffcf;
+  padding: 0.4em;
+}
+i span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#family-picture {
+  width: 80%;
+  height: auto;
+  border: solid 2px black;
 }
