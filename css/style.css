@@ -107,7 +107,7 @@ dialog::backdrop {
   place-self: center;
   font-size: 1.5rem;
   height: 90%;
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 #delete-family-dialog[open] {
@@ -128,6 +128,7 @@ dialog::backdrop {
   height: 100%;
   flex-direction: row;
   padding: 2rem;
+  gap: 1em;
 }
 #delete-family-form fieldset {
   justify-content: center;
@@ -154,7 +155,7 @@ dialog::backdrop {
   text-align: center;
 }
 #create-residents {
-  width: 60%;
+  width: 70%;
   padding: 0 1em;
   text-align: right;
 }
@@ -246,4 +247,14 @@ label {
 }
 #residents-label {
   width: fit-content;
+}
+#radio-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#input-option-other,
+#input-option-pets {
+  padding: 0 1em;
+  width: 50%;
 }
