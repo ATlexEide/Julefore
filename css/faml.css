@@ -158,9 +158,10 @@ input[type="range"] {
   margin: 0;
   width: 80%;
 }
-
-#remove-filter-btn {
+#apply-filter-btn {
   margin-bottom: 1em;
+}
+#remove-filter-btn {
   background-color: rgb(249, 33, 33);
   border: 1px solid black;
 }
