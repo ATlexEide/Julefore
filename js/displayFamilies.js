@@ -13,6 +13,7 @@ const giftsIcon = document.getElementById("icon-gifts");
 const foodIcon = document.getElementById("icon-food");
 const alcoholIcon = document.getElementById("icon-alcohol");
 const closeBtn = document.getElementById("close-family-dialog");
+const desc = document.getElementById("desc");
 closeBtn.addEventListener("click", () => {
   dialog.close();
 });
@@ -27,6 +28,7 @@ export function displayFamilies(families) {
     article.addEventListener("click", () => {
       familyPicture.src = family.image;
       familyPicture.alt = `bilde av ${family.title}`;
+      desc.textContent = family.description;
       familyTitle.textContent = family.title;
       residentsIcon.textContent = " " + family.preferences.residents;
       giftsIcon.textContent = family.preferences.gifts

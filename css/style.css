@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body {
   height: 100svh;
@@ -39,6 +41,9 @@ input {
 #heading {
   background-color: #365632;
   width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #sidebar {
@@ -63,10 +68,7 @@ h1,
 #welcome {
   color: white;
   text-align: center;
-  margin-top: 100px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 65px;
+  font-size: 4em;
 }
 
 a {
@@ -100,15 +102,19 @@ input:disabled {
   border: none;
   opacity: 0.5;
 }
+dialog::backdrop {
+  /* TODO: FIX BACKDROP OPACITY */
+  color: rgb(0, 0, 0, 0.9);
+}
 #create-family-dialog[open],
 #delete-family-dialog[open] {
-  font-size: 1.5rem;
-  margin: auto;
-  width: 60%;
-  height: 80%;
-  place-self: center;
   display: flex;
   flex-direction: column;
+  place-self: center;
+  font-size: 1.5rem;
+  height: 90%;
+  width: 80%;
+  margin: auto;
 }
 #delete-family-dialog[open] {
   height: 30%;
@@ -117,26 +123,27 @@ input:disabled {
   margin: 0;
 }
 .form-header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
 }
 #create-family-form,
 #delete-family-form {
   display: flex;
-  height: 100%;
   flex-direction: row;
+  padding: 2rem;
 }
 #delete-family-form fieldset {
   justify-content: center;
 }
 .family-info,
 .preferences {
-  border: 0;
-  padding: 2em;
   display: flex;
   flex-direction: column;
-  gap: 1em;
   width: 100%;
-  height: 100%;
+  gap: 1em;
+  border: 0;
 }
 .form-input {
   width: 100%;
@@ -145,7 +152,6 @@ input:disabled {
 .form-input[type="text"],
 .form-input[type="number"] {
   height: 3em;
-  gap: 1em;
 }
 .form-input[type="checkbox"] {
   margin: 0;
@@ -163,7 +169,6 @@ label {
 }
 .input-label-container {
   display: flex;
-  padding-left: auto;
   align-items: center;
 }
 
@@ -187,6 +192,7 @@ label {
 
 #select-action-menu {
   text-align: center;
+  border-radius: 20px;
 }
 
 .icon {
@@ -196,8 +202,8 @@ label {
 
 .cre-del {
   padding-top: 10px;
-  font-size: 40px;
-  color: #242424;
+  font-size: 2.5rem;
+  color: #ebebeb;
   font-weight: bold;
   border-bottom: solid 2px black;
 }
@@ -208,7 +214,8 @@ label {
   background-color: #ffff;
   color: #242424;
   border: solid 2px #242424;
-  width: 300px;
+  height: 25%;
+  width: 60%;
 }
 
 #create {
@@ -217,4 +224,7 @@ label {
 
 #delete {
   background-color: #8b181d;
+}
+#residents-label {
+  width: fit-content;
 }
