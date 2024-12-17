@@ -24,12 +24,6 @@ input {
   background-color: #365632;
   font-size: large;
   font-weight: bold;
-  margin-right: 10%;
-  margin-top: 35px;
-  margin-bottom: 25px;
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
   border: 2px solid #365632;
 }
 
@@ -131,6 +125,7 @@ dialog::backdrop {
 #create-family-form,
 #delete-family-form {
   display: flex;
+  height: 100%;
   flex-direction: row;
   padding: 2rem;
 }
@@ -145,8 +140,24 @@ dialog::backdrop {
   gap: 1em;
   border: 0;
 }
-.form-input {
+.input-2x {
+  display: flex;
   width: 100%;
+}
+#create-family-name {
+  padding: 0 1em;
+  width: 100%;
+}
+#create-family-name:placeholder-shown,
+#create-residents:placeholder-shown {
+  text-align: center;
+}
+#create-residents {
+  width: 60%;
+  padding: 0 1em;
+  text-align: right;
+}
+.form-input {
   background-color: whitesmoke;
 }
 .form-input[type="text"],
@@ -158,9 +169,11 @@ dialog::backdrop {
 }
 
 .description-input {
-  height: 50%;
+  height: 100%;
   width: 100%;
   resize: vertical;
+  font-size: large;
+  padding: 1em;
 }
 label {
   padding: 0 0.4em;
