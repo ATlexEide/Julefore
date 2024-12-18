@@ -1,22 +1,22 @@
 [
   {
+    "title": "Familien Endresen",
     "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "title": "le CREATED familien",
-    "description": "<Lorem ipsum>",
+    "description": "Fin familie med masse eldre, koslige folk",
     "preferences": {
-      "food": "lutefesk",
+      "food": "lars",
       "allergy_friendly": false,
       "alcohol": true,
       "gifts": true,
-      "pets": { "hasPets": true, "species": ["fæsken"] },
-      "residents": 1
+      "pets": { "hasPets": false, "species": [] },
+      "residents": 35
     },
     "id": "cb83db12-2b1c-41ec-ab98-62438220d678"
   },
   {
-    "title": "Heccern's familj",
+    "title": "Heccern's Familie",
     "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "feir jul med oss fra el' mexico",
+    "description": "Feir jul med oss fra el' mexico",
     "preferences": {
       "residents": 3,
       "food": "taco",
@@ -25,18 +25,60 @@
       "pets": { "hasPets": true, "species": ["lasse"] },
       "gifts": false
     },
-    "id": "2232fac2-cf52-4769-ac24-8b3df38ba560"
+    "id": "2232fac2-cf52-4769-ac24-8b3df38bx560"
   },
   {
-    "title": "Heccerns andre familie",
+    "title": "Heccern's andre familie",
     "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Min andre kone og meg",
+    "description": "Eller feir jul med min andre kone og meg",
     "preferences": {
       "residents": 2,
       "food": "pinnekjøtt",
       "alcohol": false,
-      "allergy_friendly": false,
+      "allergy_friendly": true,
       "pets": { "hasPets": true, "species": ["lasse"] },
+      "gifts": true
+    },
+    "id": "49ad96d6-67a6-4ff2-b4cc-cde7ae56cp86"
+  },
+  {
+    "title": "Familien 'Bordet bak i hjørnet'",
+    "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Blir du med på butikken?",
+    "preferences": {
+      "residents": 1,
+      "food": "pinnekjøtt",
+      "alcohol": false,
+      "allergy_friendly": false,
+      "pets": { "hasPets": true, "species": ["hector"] },
+      "gifts": false
+    },
+    "id": "49ad96d6-67a6-4ff2-b4cc-cde7ae56ch86"
+  },
+  {
+    "title": "Familien 'Har enda ikke fått skikkelig tilbakemeldig på den oppgaven..",
+    "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": ".... det har gått mer en 2 uker nå",
+    "preferences": {
+      "residents": 1,
+      "food": "barten til lars",
+      "alcohol": true,
+      "allergy_friendly": false,
+      "pets": { "hasPets": false, "species": [] },
+      "gifts": false
+    },
+    "id": "49ad96d6-67a6-4ff2-b4cc-cde7ae56cc86"
+  },
+  {
+    "title": "Familien Navbar",
+    "image": "https://images.unsplash.com/photo-1639430270336-1359d6b9ba6d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "nei ok... der var den sletter",
+    "preferences": {
+      "residents": 4,
+      "food": "ribbe",
+      "alcohol": true,
+      "allergy_friendly": true,
+      "pets": { "hasPets": false, "species": [] },
       "gifts": false
     },
     "id": "49ad96d6-67a6-4ff2-b4cc-cde7ae56cf86"
